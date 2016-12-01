@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="ncue_history.theme">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="ncue_history.theme.interfaces.INcueHistoryThemeLayer"
+      />
+
+  <!-- Publish static files -->
+  <browser:resourceDirectory
+      name="ncue_history.theme"
+      directory="static"
+      />
+
+</configure>

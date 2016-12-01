@@ -1,0 +1,6 @@
+[report]
+include =
+    src/ncue_history/*
+omit =
+    */test*
+    */upgrades/*
