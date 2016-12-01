@@ -6,7 +6,7 @@
 ncue_history.theme
 ==============================================================================
 
-Tell me what your product does
+NCUE History Package
 
 Features
 --------
