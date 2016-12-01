@@ -12,6 +12,7 @@ Features
 --------
 
 - Can be bullet points
+- Can be listed
 
 
 Examples
