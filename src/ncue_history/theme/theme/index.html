@@ -1,172 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Starter Template for Bootstrap</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-  <style type="text/css">
-    html body {
-      /* Space for the bootstrap top navigation bar */
-      padding-top: 70px;
-    }
-    /* Top Navigation css adjustments */
-    .navbar .selected a {
-      color: #fff;
-      background: #080808;
-    }
-    /* Edit Bar css adjustments */
-    .nav-tabs .selected {
-      border-width: 1px;
-      border-style: solid;
-      border-color: #DDD #DDD transparent;
-      -moz-border-top-colors: none;
-      -moz-border-right-colors: none;
-      -moz-border-bottom-colors: none;
-      -moz-border-left-colors: none;
-      border-bottom: 1px solid #fff;
-    }
-    .nav-tabs .selected a {
-      margin-right: 0;
-    }
-    .pull-left, .pull-right {
-      width: 50%;
-    }
-    .pull-right > li {
-      float: right;
-      display: inline-block;
-    }
-    #contentMenuAddNew li a {
-      width: 100%;
-    }
-  </style>
-
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Education</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/fullcalendar.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/jquery.bxslider.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="svg/style.css" rel="stylesheet">
+<link href="css/widget.css" rel="stylesheet">
+<link href="css/typography.css" rel="stylesheet">
+<link href="css/shortcodes.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/color.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="css/selectric.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.sidr.dark.css">
 </head>
 
 <body>
-
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+<!--KF KODE WRAPPER WRAP START-->
+<div class="kode_wrapper"> 
+  <!-- register Modal -->
+  <div class="modal fade" id="reg-box" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-content"> 
+        <!--SIGNIN AS USER START-->
+        <div class="user-box">
+          <h2>Sign up as a User</h2>
+          <!--FORM FIELD START-->
+          <div class="form">
+            <div class="input-container">
+              <input type="text" placeholder="Name">
+              <i class="fa fa-user"></i> </div>
+            <div class="input-container">
+              <input type="text" placeholder="E-mail">
+              <i class="fa fa-envelope-o"></i> </div>
+            <div class="input-container">
+              <input type="password" placeholder="Password">
+              <i class="fa fa-unlock"></i> </div>
+            <div class="input-container">
+              <label> <span class="radio">
+                <input type="checkbox" name="foo" value="1" checked>
+                <span class="radio-value" aria-hidden="true"></span> </span> <span>Remember me</span> </label>
+            </div>
+            <div class="input-container">
+              <button class="btn-style">Sign Up</button>
+            </div>
+          </div>
+          <!--FORM FIELD END--> 
+          <!--OPTION START-->
+          <div class="option">
+            <h5>Or Using</h5>
+          </div>
+          <!--OPTION END--> 
+          <!--OPTION START-->
+          <div class="social-login"> <a href="#" class="google"><i class="fa fa-google-plus"></i>Google Account</a> <a href="#" class="facebook"><i class="fa fa-facebook"></i>Facebook Account</a> </div>
+          <!--OPTION END--> 
+        </div>
+        <!--SIGNIN AS USER END-->
+        <div class="user-box-footer"> Already have an account? <a href="#">Sign In</a> </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- register Modal end--> 
+  
+  <!-- SIGNIN MODEL START -->
+  <div class="modal fade" id="signin-box" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-content">
+        <div class="user-box">
+          <h2>Sign In</h2>
+          <!--FORM FIELD START-->
+          <div class="form">
+            <div class="input-container">
+              <input type="text" placeholder="E-mail">
+              <i class="fa fa-envelope-o"></i> </div>
+            <div class="input-container">
+              <input type="password" placeholder="Password">
+              <i class="fa fa-unlock"></i> </div>
+            <div class="input-container">
+              <label> <span class="radio">
+                <input type="checkbox" name="foo" value="1" checked>
+                <span class="radio-value" aria-hidden="true"></span> </span> <span>Remember me</span> </label>
+            </div>
+            <div class="input-container">
+              <button class="btn-style">Sign In</button>
+            </div>
+          </div>
+          <!--FORM FIELD END--> 
+          <!--OPTION START-->
+          <div class="option">
+            <h5>Or Using</h5>
+          </div>
+          <!--OPTION END--> 
+          <!--OPTION START-->
+          <div class="social-login"> <a href="#" class="google"><i class="fa fa-google-plus"></i>Google Account</a> <a href="#" class="facebook"><i class="fa fa-facebook"></i>Facebook Account</a> </div>
+          <!--OPTION END--> 
+          
+        </div>
+        <div class="user-box-footer">
+          <p>Don't have an account?<br>
+            <a href="#">Sign up as a User</a></p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- SIGNIN MODEL END --> 
+  
+  <!--HEADER START-->
+  <header id="header_2"> 
+    <!--kode top bar start-->
+    <div class="top_bar_2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="pull-left"> <em class="contct_2"><i class="fa fa-phone"></i> 聯絡電話 (04) 721-1207</em> </div>
+          </div>
+          <div class="col-md-7">
+            <div class="lng_wrap">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-globe"></i>語言 <span class="caret"></span> </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#"><i><img src="images/english.jpg" alt=""></i>English</a></li>
+                  <li><a href="#"><i><img src="images/german.jpg" alt=""></i>German</a></li>
+                </ul>
+              </div>
+            </div>
+            <ul class="login_wrap">
+              <li><a href="#" data-toggle="modal" data-target="#signin-box"><i class="fa fa-sign-in"></i>登入</a></li>
+            </ul>
+            <ul class="top_nav">
+              <li><a href="#">學校首頁</a></li>
+              <li><a href="#">下載資源</a></li>
+              <li><a href="contactus.html">聯絡我們</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--kode top bar end--> 
+    
+    <!--kode navigation start-->
+    <div class="kode_navigation">
+      <div id="mobile-header"> <a id="responsive-menu-button" href="#sidr-main"><i class="fa fa-bars"></i></a> </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="logo_wrap"> <a href="index.html"><img src="extra-images/logo_2.png" alt=""></a> </div>
+          </div>
+          <div class="col-md-10"> 
+            <!--kode nav_2 start-->
+            <div class="nav_2" id="navigation">
+              <ul>
+                <li><a href="aboutus.html">本所簡介</a>
+                  <ul>
+                    <li><a href="#">本所理念與特色</a></li>
+                    <li><a href="#">師資介紹</a></li>
+                    <li><a href="#">教學資源與設備</a></li>
+                    <li><a href="#">畢業生進路</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">招生資訊 </a> </li>
+                <li><a href="#">最新消息 </a> </li>
+                <li><a href="#">課程規劃</a>
+                  <ul>
+                    <li><a href="#">課程架構</a></li>
+                    <li><a href="#">修業事項</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">歷史與文化產業學程</a> </li>
+                <li><a href="#">學術活動</a>
+                  <ul>
+                    <li><a href="#">白沙地理學報</a></li>
+                    <li><a href="#">白沙歷史地理研討會</a></li>
+                    <li><a href="#">白沙歷史地理學術講座</a></li>
+                    <li><a href="#">學人交流訪問動態</a></li>
+                    <li><a href="#">畢業生論文題目</a></li>
+                    <li><a href="#">白沙歷史地理工作坊</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">師生交流</a> </li>
+                <li><a href="#">主題專案</a>
+                  <ul>
+                    <li><a href="#">歷史學研究所所友會</a></li>
+                    <li><a href="#">教育部經典研讀計畫-水經注讀書會</a></li>
+                    <li><a href="#">教育部臺灣文史與藝術課程強化研發植根計畫：GIS在中學台灣歷史教學上的運用教師研習營</a></li>
+                    <li><a href="#">97年度發展卓越師資培育計畫-運用GIS促進歷史教學活潑化</a></li>
+                    <li><a href="#">教育部人文數位教學計畫-木質構造歷史建築保存特論</a></li>
+                    <li><a href="#">白沙歷史地理工作坊</a></li>
+                    <li><a href="#">歷史地圖繪製室</a></li>
+                    <li><a href="#">白沙歷史地理工作坊</a></li>
+                  </ul>
+                </li>
+                <li><a id="simple-menu" href="#sidr"><i class="fa fa-bars"></i></a></li>
+              </ul>
+            </div>
+            <!--kode nav_2 end--> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--kode navigation end--> 
+  </header>
+  <!--HEADER END-->
+  
+  <div class="edu2_main_bn_wrap">
+    <div id="owl-demo-main" class="owl-carousel owl-theme">
+      <div class="item">
+        <figure> <img src="extra-images/slider1.jpg" alt=""/>
+          <figcaption> <span class="title"><a href="#"> 教育部經典研讀計畫-水經注讀書會</a></span> </figcaption>
+        </figure>
+      </div>
+      <div class="item">
+        <figure> <a href="#"><img src="extra-images/slider2.jpg" alt=""/></a>
+          <figcaption> <span class="title"><a href="#">第二屆白沙歷史地理工作坊</a></span> </figcaption>
+        </figure>
+      </div>
+      <div class="item">
+        <figure> <img src="extra-images/slider3.jpg" alt=""/>
+          <figcaption> <span class="title"><a href="#">106學年度碩士班一般招生考試</a></span> </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="kf_content_wrap">
+    <div class="kf_course_outerwrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row"> 
+              <!--COURSE CATEGORIES WRAP START-->
+              <div class="kf_cur_catg_wrap"> 
+                <!--COURSE CATEGORIES WRAP HEADING START-->
+                <div class="col-md-12"> </div>
+                <!--COURSE CATEGORIES WRAP HEADING END--> 
+                
+                <!--COURSE CATEGORIES DES START-->
+                <div class="item" style="visibility: visible;"> <img src="http://history.ncue.edu.tw/images/header.png"  class="img-responsive">
+                  <div class="image-caption"> <img src="http://history.ncue.edu.tw/images/history.gif" class="img-responsive"> </div>
+                </div>
+              </div>
+              <!--COURSE CATEGORIES WRAP END--> 
+            </div>
+          </div>
+          <div class="col-md-4"> 
+            <!-- EDU2 SEARCH WRAP START -->
+            <div class="kf_edu2_search_wrap">
+              <div class="kf_edu2_heading1">
+                <h3>學術活動</h3>
+              </div>
+              <!-- FORM START -->
+              <div class="widget widget-recent-posts">
+                <ul class="sidebar_rpost_des">
+                  <!--LIST ITEM START-->
+                  <li>
+                    <div class="kode-text">
+                      <h6><a href="#"> 105學年度第一學期第8次專題演講</a></h6>
+                      <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span> </div>
+                  </li>
+                  <!--LIST ITEM START--> 
+                  <!--LIST ITEM START-->
+                  <li>
+                    <div class="kode-text">
+                      <h6><a href="#"> 105學年度第一學期第8次專題演講</a></h6>
+                      <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span> </div>
+                  </li>
+                  <!--LIST ITEM START--> 
+                  <!--LIST ITEM START-->
+                  <li>
+                    <div class="kode-text">
+                      <h6><a href="#">數位人文典藏資源推廣工作坊</a></h6>
+                      <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span> </div>
+                  </li>
+                  <!--LIST ITEM START-->
+                </ul>
+              </div>
+              <p class="more-link"><a href="#" class="su-link"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <span>更多活動</span></a></p>
+              <!-- FORM END --> 
+            </div>
+            <!-- EDU2 SEARCH WRAP END --> 
+          </div>
+          <div class="col-md-4"> 
+            <!-- EDU2 SEARCH WRAP START -->
+            <div class="kf_edu2_search_wrap">
+              <div class="kf_edu2_heading1">
+                <h3>最新消息</h3>
+              </div>
+              <!-- FORM START -->
+              <div class="widget widget-recent-posts">
+                <ul class="sidebar_rpost_des">
+                  <!--LIST ITEM START-->
+                  <li>
+                    <div class="kode-text">
+                      <h6><a href="#"> 105學年度第一學期第8次專題演講</a></h6>
+                      <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span> </div>
+                  </li>
+                  <!--LIST ITEM START--> 
+                  <!--LIST ITEM START-->
+                  <li>
+                    <div class="kode-text">
+                      <h6><a href="#"> 105學年度第一學期第8次專題演講</a></h6>
+                      <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span> </div>
+                  </li>
+                  <!--LIST ITEM START--> 
+                  <!--LIST ITEM START-->
+                  <li>
+                    <div class="kode-text">
+                      <h6><a href="#">數位人文典藏資源推廣工作坊</a></h6>
+                      <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span> </div>
+                  </li>
+                  <!--LIST ITEM START-->
+                </ul>
+              </div>
+              <p class="more-link"><a href="#" class="su-link"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <span>更多消息</span></a></p>
+              <!-- FORM END --> 
+            </div>
+            <!-- EDU2 SEARCH WRAP END --> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FACULTY WRAP START-->
+    <section>
+      <div class="container">
+        <div class="row"> 
+          <!-- HEADING 1 START-->
+          <div class="col-md-12">
+            <div class="kf_edu2_heading1">
+              <h3>歷史學研究所介紹</h3>
+            </div>
+          </div>
+          <!-- HEADING 1 END--> 
+          
+          <!-- FACULTY SLIDER WRAP START-->
+          <div class="edu2_faculty_wrap">
+            <div id="owl-demo-8" class="owl-carousel owl-theme">
+              <div class="item"> 
+                <!-- FACULTY DES START-->
+                <div class="edu2_faculty_des">
+                  <figure><img src="extra-images/faculty-mb1.jpg" alt=""/>
+                    <figcaption> <a href="#"><i class="fa fa-link"></i></a> </figcaption>
+                  </figure>
+                  <div class="edu2_faculty_des2">
+                    <h6><a href="#">本所理念與特色</a></h6>
+                    <p>本所前身為本校共同學科歷史組。民國92年10月27日，教育部部准許本校於93學年度成立...</p>
+                    <a href="#">更多介紹</a> </div>
+                </div>
+                <!-- FACULTY DES END--> 
+              </div>
+              <div class="item"> 
+                <!-- FACULTY DES START-->
+                <div class="edu2_faculty_des">
+                  <figure><img src="extra-images/faculty-mb2.jpg" alt=""/>
+                    <figcaption> <a href="#"><i class="fa fa-link"></i></a> </figcaption>
+                  </figure>
+                  <div class="edu2_faculty_des2">
+                    <h6><a href="#">師資介紹</a></h6>
+                    <p>本所專兼任教師均為歷史地理、方志學、歷史教育、簡帛學、文化資產保存等各領域專業學者...</p>
+                    <a href="#">更多介紹</a> </div>
+                </div>
+                <!-- FACULTY DES END--> 
+              </div>
+              <div class="item"> 
+                <!-- FACULTY DES START-->
+                <div class="edu2_faculty_des">
+                  <figure><img src="extra-images/faculty-mb3.jpg" alt=""/>
+                    <figcaption> <a href="#"><i class="fa fa-link"></i></a> </figcaption>
+                  </figure>
+                  <div class="edu2_faculty_des2">
+                    <h6><a href="#">教學資源與設備</a></h6>
+                    <p>本校歷史學研究所位於進德校區白沙大樓東側，擁有豐富的教學資源與設備...</p>
+                    <a href="#">更多介紹</a> </div>
+                </div>
+                <!-- FACULTY DES END--> 
+              </div>
+              <div class="item"> 
+                <!-- FACULTY DES START-->
+                <div class="edu2_faculty_des">
+                  <figure><img src="extra-images/faculty-mb4.jpg" alt=""/>
+                    <figcaption> <a href="#"><i class="fa fa-link"></i></a> </figcaption>
+                  </figure>
+                  <div class="edu2_faculty_des2">
+                    <h6><a href="#">畢業生進路</a></h6>
+                    <p>生涯規劃圖： 生涯進程—博士班深造管道： 生涯進程—中等教育機關： 生涯進程—公務機關： </p>
+                    <a href="#">更多介紹</a> </div>
+                </div>
+                <!-- FACULTY DES END--> 
+              </div>
+            </div>
+          </div>
+          <!-- FACULTY SLIDER WRAP END--> 
+        </div>
+      </div>
+    </section>
+    <!-- FACULTY WRAP START--> 
+    
+  </div>
+  
+  <!--EDU2 FOOTER WRAP START--> 
+  <!--NEWS LETTERS START-->
+  <div class="edu2_ft_topbar_wrap">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Plone</a>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul id="navbar" class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              <span id="user-name">Username</span>
-              <span class="caret"></span>
-            </a>
-            <ul id="action-menu-content" class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
-
-  <div class="container">
-
-    <ol id="breadcrumbs" class="breadcrumb">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Library</a></li>
-      <li class="active">Data</li>
-    </ol>
-
-    <div class="row">
-      <div class="col-md-12 hidden-xs">
-        <ul id="contentViews" class="nav nav-tabs pull-left">
-          <li role="presentation" class="active"><a href="#">Contents</a></li>
-          <li role="presentation"><a href="#">Edit</a></li>
-          <li role="presentation"><a href="#">Sharing</a></li>
-        </ul>
-        <ul class="nav nav-tabs pull-right">
-          <li role="presentation" class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-              <span id="currentWorkflowState">State</span>
-              <span class="caret"></span>
-            </a>
-            <ul id="contentMenuWorkflowState" class="dropdown-menu dropdown-menu-right" role="menu">
-              <li>
-                <a href="#">One</a>
-              </li>
-              <li>
-                <a href="#">Two</a>
-              </li>
-            </ul>
-          </li>
-          <li role="presentation" class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-              Add new <span class="caret"></span>
-            </a>
-            <ul id="contentMenuAddNew" class="dropdown-menu dropdown-menu-right" role="menu">
-              <li>
-                <a href="#">One</a>
-              </li>
-              <li>
-                <a href="#">Two</a>
-              </li>
-            </ul>
-          </li>
-          <li role="presentation" class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-              Display <span class="caret"></span>
-            </a>
-            <ul id="contentMenuDisplay" class="dropdown-menu dropdown-menu-right" role="menu">
-              <li>
-                <a href="#">One</a>
-              </li>
-              <li>
-                <a href="#">Two</a>
-              </li>
-            </ul>
-          </li>
-
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="row">
-      <div id="content" class="col-md-12">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      <div class="row">
+        <div class="col-md-6"> </div>
+        <div class="col-md-6">
+          <div class="edu2_ft_topbar_des">
+            <form>
+              <input type="email" placeholder="輸入文字">
+              <button><i class="fa fa-search"></i>搜尋</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-
-    <footer>
-      <p>&copy; Company 2016</p>
-    </footer>
-
-  </div><!-- /.container -->
-
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
+  </div>
+  <!--NEWS LETTERS END--> 
+  <!--FOOTER START-->
+  <footer> 
+    <!--EDU2 FOOTER CONTANT WRAP START-->
+    <div class="container">
+      <div class="row"> 
+        <!--EDU2 FOOTER CONTANT DES START-->
+        <div class="col-md-3">
+          <div class="widget widget-links">
+            <h5>歷史學研究所</h5>
+            <ul>
+              <li><a href="#">本所理念與特色</a></li>
+              <li><a href="#">師資介紹</a></li>
+              <li><a href="#">教學資源與設備</a></li>
+              <li><a href="#">畢業生進路</a></li>
+              <li><a href="#">招生資訊</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--EDU2 FOOTER CONTANT DES END--> 
+        
+        <!--EDU2 FOOTER CONTANT DES START-->
+        <div class="col-md-3">
+          <div class="widget widget-links">
+            <h5>相關連結</h5>
+            <ul>
+              <li><a href="#">國立彰化師範大學</a></li>
+              <li><a href="#">師生交流</a></li>
+              <li><a href="#">歷史與文化產業學程</a></li>
+              <li><a href="#">主題專案</a></li>
+              <li><a href="#">資源下載</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--EDU2 FOOTER CONTANT DES END--> 
+        
+        <!--EDU2 FOOTER CONTANT DES START-->
+        <div class="col-md-3">
+          <div class="widget wiget-instagram">
+            <h5>Follow N.C.U.E. News</h5>
+            <div class="mod-b sep" data-usn-element-name="00000142-523d-deff-af66-5a3d7cfa0003" data-aid="a34109">
+              <ul class="bar-pad6 block">
+                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/490a609/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fc4%2F39%2F677999944687ac9ad6e43d137456%2Ffacebook-icon.png" alt="Facebook" srcset="http://www.usnews.com/dims4/USNEWS/490a609/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fc4%2F39%2F677999944687ac9ad6e43d137456%2Ffacebook-icon.png, http://www.usnews.com/dims4/USNEWS/978d219/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2Fc4%2F39%2F677999944687ac9ad6e43d137456%2Ffacebook-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
+                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/fd3ae02/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F67%2F7d%2Fb1d026154808be5169e12d9eea1a%2Ftwitter-icon.png" alt="Twitter" srcset="http://www.usnews.com/dims4/USNEWS/fd3ae02/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F67%2F7d%2Fb1d026154808be5169e12d9eea1a%2Ftwitter-icon.png, http://www.usnews.com/dims4/USNEWS/61220e8/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2F67%2F7d%2Fb1d026154808be5169e12d9eea1a%2Ftwitter-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
+                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/926d82f/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Ff9%2Fc6%2F77b52fad43989c86af1be633e5ca%2Fgoogle-icon.png" alt="Google+" srcset="http://www.usnews.com/dims4/USNEWS/926d82f/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Ff9%2Fc6%2F77b52fad43989c86af1be633e5ca%2Fgoogle-icon.png, http://www.usnews.com/dims4/USNEWS/2feb01a/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2Ff9%2Fc6%2F77b52fad43989c86af1be633e5ca%2Fgoogle-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
+                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/f278c30/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fea%2F0b%2Fc2989d554fc3ac3fc3c4ddc328c1%2Flinkedin-icon.png" alt="LinkedIn" srcset="http://www.usnews.com/dims4/USNEWS/f278c30/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fea%2F0b%2Fc2989d554fc3ac3fc3c4ddc328c1%2Flinkedin-icon.png, http://www.usnews.com/dims4/USNEWS/bc81333/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2Fea%2F0b%2Fc2989d554fc3ac3fc3c4ddc328c1%2Flinkedin-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
+                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/de32fca/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F88%2Fbe%2F99f2482541d7a2759e9ca9785d30%2Frss58x58.png" alt="rss58x58.png" srcset="http://www.usnews.com/dims4/USNEWS/de32fca/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F88%2Fbe%2F99f2482541d7a2759e9ca9785d30%2Frss58x58.png, http://www.usnews.com/dims4/USNEWS/5c04a78/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2F88%2Fbe%2F99f2482541d7a2759e9ca9785d30%2Frss58x58.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--EDU2 FOOTER CONTANT DES END--> 
+        
+        <!--EDU2 FOOTER CONTANT DES START-->
+        <div class="col-md-3">
+          <div class="widget widget-contact">
+            <h5>與我們聯絡</h5>
+            <ul>
+              <li>地址：500 彰化市進德路一號 </li>
+              <li>電話：(04) 721-1207， (04) 723-2105#1933</li>
+              <li>傳真：(04) 721-1254 </li>
+              <li>信箱： <a href="#"> lisa@cc.ncue.edu.tw</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--EDU2 FOOTER CONTANT DES END--> 
+      </div>
+    </div>
+  </footer>
+  <!--FOOTER END--> 
+  <!--COPYRIGHTS START-->
+  <div class="edu2_copyright_wrap">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div class="copyright_des"> <span>&copy; 國立彰化師範大學歷史學研究所，版權所有 © N.C.U.E. All rights reserved.</span>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--COPYRIGHTS START--> 
+</div>
+<!--KF KODE WRAPPER WRAP END--> 
+<!--Bootstrap core JavaScript--> 
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<!--Bx-Slider JavaScript--> 
+<script src="js/jquery.bxslider.min.js"></script> 
+<!--Owl Carousel JavaScript--> 
+<script src="js/owl.carousel.min.js"></script> 
+<!--Pretty Photo JavaScript--> 
+<script src="js/jquery.prettyPhoto.js"></script> 
+<!--Full Calender JavaScript--> 
+<script src="js/moment.min.js"></script> 
+<script src="js/fullcalendar.min.js"></script> 
+<script src="js/jquery.downCount.js"></script> 
+<!--Image Filterable JavaScript--> 
+<script src="js/jquery-filterable.js"></script> 
+<!--Accordian JavaScript--> 
+<script src="js/jquery.accordion.js"></script> 
+<!--Number Count (Waypoints) JavaScript--> 
+<script src="js/waypoints-min.js"></script> 
+<!--v ticker--> 
+<script src="js/jquery.vticker.min.js"></script> 
+<!--select menu--> 
+<script src="js/jquery.selectric.min.js"></script> 
+<!--Side Menu--> 
+<script src="js/jquery.sidr.min.js"></script> 
+<!--Custom JavaScript--> 
+<script src="js/custom.js"></script>
 </body>
 </html>

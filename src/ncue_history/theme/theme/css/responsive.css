@@ -203,7 +203,11 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
 	
-  
+ 	.logo_wrap img{
+    float: right;
+    padding-right: 10px;
+    width: 350px;
+	} 
 }
 /*
 =================================================
@@ -214,20 +218,32 @@
 	#kode-header{
 		position:relative;
 	}
-
+ 	.logo_wrap img{
+    float: right;
+    padding-right: 10px;
+    width: 280px;
+	}
 	.top_nav{
 		display: none;
 	}
 	.edu2_main_bn_wrap figcaption span, .edu2_main_bn_wrap figcaption p, .edu2_main_bn_wrap .btn-1{
-		display: none;
+       font-size: 15px;
 	}
+   .edu2_main_bn_wrap .owl-theme .owl-controls .owl-page span {
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    display: inline-block;
+    height: 12px;
+    margin: 0 2px;
+    width: 12px;
+    }	
 	.edu2_main_bn_wrap figcaption h2{
 		font-size: 30px;
 	}
 	.edu2_main_bn_wrap figure figcaption{
 		margin: 0px;
-		padding:0px 50px;
-		top: 30%;
+
 	}
 	.kf_intro_des{
 		width: 100%;
@@ -381,7 +397,9 @@
 		padding: 10px 
 	}
 	.logo_wrap img{
-		width: 140px;
+    float: right;
+    padding-right: 10px;
+    width: 250px;
 	}
 	.location_des{
 		position: static;

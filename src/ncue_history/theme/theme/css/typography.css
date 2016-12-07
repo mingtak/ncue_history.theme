@@ -31,14 +31,21 @@
 	-ms-box-sizing:border-box;	
 }
 body {
-    color: #777777;
+    color: #444444;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 16px;
     font-weight: 300;
 	line-height:30px;
-    background-color: #ffffff;
+    background-color: #FBFBF9;
+	background-image: url("extra-images/bk-gradient.jpg");  
+	background-position: center top;
+    background-repeat: repeat-x;
 }
-
+.kf_content_wrap {
+	background-image: url("../extra-images/bk-gradient.jpg");  
+	background-position: center top;
+    background-repeat: repeat-x;
+}
 /* Heading Typo */
 body h1, body h2, body h3, body h4, body h5, body h6 {
     color: #2f2f2f;
