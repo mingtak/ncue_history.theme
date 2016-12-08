@@ -53,6 +53,7 @@ portal = api.portal.get()
                   <li tal:condition="python:item.portal_type == 'Folder'">
                     <div class="kode-text">
                       <h6><a tal:attributes="href item/absolute_url; title item/title" tal:content="item/title"> 105學年度第一學期第8次專題演講</a></h6>
+                      <span><i class="fa fa-clock-o"></i><span tal:replace="python:item.modified().strftime('%d %b, %Y')">10 Jan, 2016</span></span>
 <!--                      <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span> -->
                     </div>
                   </li>
@@ -76,7 +77,7 @@ portal = api.portal.get()
                 <ul class="sidebar_rpost_des"
                     tal:define="news python:api.content.find(context=portal, Type='News Item', sort_on='created', sort_order='reverse')">
                   <!--LIST ITEM START-->
-                  <li tal:repeat="item python:news[0:3]">
+                  <li tal:repeat="item python:news[0:6]">
                     <div class="kode-text">
                       <h6><a tal:attributes="href item/getURL; title item/Title" tal:content="item/Title"> 105學年度第一學期第8次專題演講</a></h6>
                       <span><i class="fa fa-clock-o"></i><span tal:replace="python:item.created.strftime('%d %b, %Y')">10 Jan, 2016</span></span> </div>

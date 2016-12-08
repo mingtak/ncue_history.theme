@@ -1,3 +1,7 @@
+#edit-zone {
+    z-index: 100;
+}
+
 #portal-column-content {
     padding: 0px;
 }
