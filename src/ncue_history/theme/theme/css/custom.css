@@ -1,0 +1,7 @@
+#portal-column-content {
+    padding: 0px;
+}
+
+#portal-column-content > div section{
+    padding: 0px;
+}
