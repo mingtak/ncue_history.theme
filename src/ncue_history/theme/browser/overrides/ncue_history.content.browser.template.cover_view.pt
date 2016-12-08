@@ -11,8 +11,133 @@
 <metal:content-core define-macro="content-core"
                     tal:define="toc context/table_of_contents|nothing;">
 
+<?python
+from plone import api
+portal = api.portal.get()
+?>
 
-Override Cover view
+
+
+  <div class="kf_content_wrap">
+    <div class="kf_course_outerwrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row"> 
+              <!--COURSE CATEGORIES WRAP START-->
+              <div class="kf_cur_catg_wrap"> 
+                <!--COURSE CATEGORIES WRAP HEADING START-->
+                <div class="col-md-12"> </div>
+                <!--COURSE CATEGORIES WRAP HEADING END--> 
+                
+                <!--COURSE CATEGORIES DES START-->
+                <div class="item" style="visibility: visible;"> <img src="http://history.ncue.edu.tw/images/header.png"  class="img-responsive">
+                  <div class="image-caption"> <img src="http://history.ncue.edu.tw/images/history.gif" class="img-responsive"> </div>
+                </div>
+              </div>
+              <!--COURSE CATEGORIES WRAP END--> 
+            </div>
+          </div>
+          <div class="col-md-4"> 
+            <!-- EDU2 SEARCH WRAP START -->
+            <div class="kf_edu2_search_wrap">
+              <div class="kf_edu2_heading1">
+                <h3>學術活動</h3>
+              </div>
+              <!-- FORM START -->
+              <div class="widget widget-recent-posts">
+                <ul class="sidebar_rpost_des"
+                    tal:define="folder python:portal.get('7')">
+                  <!--LIST ITEM START-->
+<tal:folder repeat="item python:folder.getChildNodes()">
+                  <li tal:condition="python:item.portal_type == 'Folder'">
+                    <div class="kode-text">
+                      <h6><a tal:attributes="href item/absolute_url; title item/title" tal:content="item/title"> 105學年度第一學期第8次專題演講</a></h6>
+<!--                      <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span> -->
+                    </div>
+                  </li>
+</tal:folder>
+                </ul>
+              </div>
+<!--              <p class="more-link"><a href="7" class="su-link"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <span>更多活動</span></a></p>
+-->
+              <!-- FORM END --> 
+            </div>
+            <!-- EDU2 SEARCH WRAP END --> 
+          </div>
+          <div class="col-md-4"> 
+            <!-- EDU2 SEARCH WRAP START -->
+            <div class="kf_edu2_search_wrap">
+              <div class="kf_edu2_heading1">
+                <h3>最新消息</h3>
+              </div>
+              <!-- FORM START -->
+              <div class="widget widget-recent-posts">
+                <ul class="sidebar_rpost_des"
+                    tal:define="news python:api.content.find(context=portal, Type='News Item', sort_on='created', sort_order='reverse')">
+                  <!--LIST ITEM START-->
+                  <li tal:repeat="item python:news[0:3]">
+                    <div class="kode-text">
+                      <h6><a tal:attributes="href item/getURL; title item/Title" tal:content="item/Title"> 105學年度第一學期第8次專題演講</a></h6>
+                      <span><i class="fa fa-clock-o"></i><span tal:replace="python:item.created.strftime('%d %b, %Y')">10 Jan, 2016</span></span> </div>
+                  </li>
+                  <!--LIST ITEM START-->
+                </ul>
+              </div>
+              <p class="more-link"><a href="${portal/absolute_url}/3" class="su-link"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <span>更多消息</span></a></p>
+              <!-- FORM END --> 
+            </div>
+            <!-- EDU2 SEARCH WRAP END --> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FACULTY WRAP START-->
+    <section>
+      <div class="container">
+        <div class="row"> 
+          <!-- HEADING 1 START-->
+          <div class="col-md-12">
+            <div class="kf_edu2_heading1">
+              <h3>歷史學研究所介紹</h3>
+            </div>
+          </div>
+          <!-- HEADING 1 END--> 
+          
+          <!-- FACULTY SLIDER WRAP START-->
+          <div class="edu2_faculty_wrap">
+            <div id="owl-demo-8" class="owl-carousel owl-theme"
+                 tal:define="tabs python:[(context.tab_folder_1.to_object, context.tab_image_1.to_object),
+                                          (context.tab_folder_2.to_object, context.tab_image_2.to_object),
+                                          (context.tab_folder_3.to_object, context.tab_image_3.to_object),
+                                          (context.tab_folder_4.to_object, context.tab_image_4.to_object),]">
+              <div class="item" tal:repeat="item tabs"> 
+                <!-- FACULTY DES START-->
+                <div class="edu2_faculty_des">
+                  <figure><img tal:attributes="src python:'%s/@@images/image/preview' % item[1].absolute_url();
+                                               alt python:item[0].title"/>
+                    <figcaption> <a tal:attributes="href python:item[0].absolute_url()"><i class="fa fa-link"></i></a> </figcaption>
+                  </figure>
+                  <div class="edu2_faculty_des2">
+                    <h6><a tal:attributes="href python:item[0].absolute_url()" tal:content="python:item[0].title">本所理念與特色</a></h6>
+                    <p tal:content="python:item[0].description">本所前身為本校共同學科歷史組。民國92年10月27日，教育部部准許本校於93學年度成立...</p>
+                    <a tal:attributes="href python:item[0].absolute_url(); title python:item[0].title">更多介紹</a> </div>
+                </div>
+                <!-- FACULTY DES END--> 
+              </div>
+
+            </div>
+          </div>
+          <!-- FACULTY SLIDER WRAP END--> 
+        </div>
+      </div>
+    </section>
+    <!-- FACULTY WRAP START--> 
+    
+  </div>
+
+
 
 </metal:content-core>
 </metal:content-core>
