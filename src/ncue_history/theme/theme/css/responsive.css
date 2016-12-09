@@ -162,7 +162,7 @@
 		text-align: right;
 	}
 	.kf_event_list_des{
-		padding: 20px 20px 20px 0 
+		/*padding: 20px 20px 20px 0 */
 	}
 	.kf_event_list_des p{
 		line-height: 24px;
@@ -286,7 +286,7 @@
 		left: 0px;
 	}
 	.kf_event_list_wrap{
-		padding:30px;
+		padding:10px;
 	}
 	.kf_event_speakers_des{
 		margin-bottom: 30px;
