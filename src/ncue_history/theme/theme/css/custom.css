@@ -9,3 +9,7 @@
 #portal-column-content > div section{
     padding: 0px;
 }
+.kf_inr_banner::before {
+    background: #A9A194 none repeat scroll 0 0;
+    opacity: 0.3;
+}
