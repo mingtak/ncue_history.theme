@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Education</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/fullcalendar.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/jquery.bxslider.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="svg/style.css" rel="stylesheet">
+<link href="css/widget.css" rel="stylesheet">
+<link href="css/typography.css" rel="stylesheet">
+<link href="css/shortcodes.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/color.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="css/selectric.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.sidr.dark.css">
+</head>
+
+<body>
+<!--KF KODE WRAPPER WRAP START-->
+<div class="kode_wrapper"> 
+  <!-- register Modal -->
+  <div class="modal fade" id="reg-box" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-content"> 
+        <!--SIGNIN AS USER START-->
+        <div class="user-box">
+          <h2>Sign up as a User</h2>
+          <!--FORM FIELD START-->
+          <div class="form">
+            <div class="input-container">
+              <input type="text" placeholder="Name">
+              <i class="fa fa-user"></i> </div>
+            <div class="input-container">
+              <input type="text" placeholder="E-mail">
+              <i class="fa fa-envelope-o"></i> </div>
+            <div class="input-container">
+              <input type="password" placeholder="Password">
+              <i class="fa fa-unlock"></i> </div>
+            <div class="input-container">
+              <label> <span class="radio">
+                <input type="checkbox" name="foo" value="1" checked>
+                <span class="radio-value" aria-hidden="true"></span> </span> <span>Remember me</span> </label>
+            </div>
+            <div class="input-container">
+              <button class="btn-style">Sign Up</button>
+            </div>
+          </div>
+          <!--FORM FIELD END--> 
+          <!--OPTION START-->
+          <div class="option">
+            <h5>Or Using</h5>
+          </div>
+          <!--OPTION END--> 
+          <!--OPTION START-->
+          <div class="social-login"> <a href="#" class="google"><i class="fa fa-google-plus"></i>Google Account</a> <a href="#" class="facebook"><i class="fa fa-facebook"></i>Facebook Account</a> </div>
+          <!--OPTION END--> 
+        </div>
+        <!--SIGNIN AS USER END-->
+        <div class="user-box-footer"> Already have an account? <a href="#">Sign In</a> </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- register Modal end--> 
+  
+  <!-- SIGNIN MODEL START -->
+  <div class="modal fade" id="signin-box" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-content">
+        <div class="user-box">
+          <h2>Sign In</h2>
+          <!--FORM FIELD START-->
+          <div class="form">
+            <div class="input-container">
+              <input type="text" placeholder="E-mail">
+              <i class="fa fa-envelope-o"></i> </div>
+            <div class="input-container">
+              <input type="password" placeholder="Password">
+              <i class="fa fa-unlock"></i> </div>
+            <div class="input-container">
+              <label> <span class="radio">
+                <input type="checkbox" name="foo" value="1" checked>
+                <span class="radio-value" aria-hidden="true"></span> </span> <span>Remember me</span> </label>
+            </div>
+            <div class="input-container">
+              <button class="btn-style">Sign In</button>
+            </div>
+          </div>
+          <!--FORM FIELD END--> 
+          <!--OPTION START-->
+          <div class="option">
+            <h5>Or Using</h5>
+          </div>
+          <!--OPTION END--> 
+          <!--OPTION START-->
+          <div class="social-login"> <a href="#" class="google"><i class="fa fa-google-plus"></i>Google Account</a> <a href="#" class="facebook"><i class="fa fa-facebook"></i>Facebook Account</a> </div>
+          <!--OPTION END--> 
+          
+        </div>
+        <div class="user-box-footer">
+          <p>Don't have an account?<br>
+            <a href="#">Sign up as a User</a></p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- SIGNIN MODEL END --> 
+  
+  <!--HEADER START-->
+  <header id="header_2"> 
+    <!--kode top bar start-->
+    <div class="top_bar_2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="pull-left"> <em class="contct_2"><i class="fa fa-phone"></i> 聯絡電話 (04) 721-1207</em> </div>
+          </div>
+          <div class="col-md-7">
+            <div class="lng_wrap">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-globe"></i>語言 <span class="caret"></span> </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#"><i><img src="images/english.jpg" alt=""></i>English</a></li>
+                  <li><a href="#"><i><img src="images/german.jpg" alt=""></i>German</a></li>
+                </ul>
+              </div>
+            </div>
+            <ul class="login_wrap">
+              <li><a href="#" data-toggle="modal" data-target="#signin-box"><i class="fa fa-sign-in"></i>登入</a></li>
+            </ul>
+            <ul class="top_nav">
+              <li><a href="#">學校首頁</a></li>
+              <li><a href="#">下載資源</a></li>
+              <li><a href="contactus.html">聯絡我們</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--kode top bar end--> 
+    
+    <!--kode navigation start-->
+    <div class="kode_navigation">
+      <div id="mobile-header"> <a id="responsive-menu-button" href="#sidr-main"><i class="fa fa-bars"></i></a> </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="logo_wrap"> <a href="index.html"><img src="extra-images/logo_2.png" alt=""></a> </div>
+          </div>
+          <div class="col-md-10"> 
+            <!--kode nav_2 start-->
+            <div class="nav_2" id="navigation">
+              <ul>
+                <li><a href="aboutus.html">本所簡介</a>
+                  <ul>
+                    <li><a href="#">本所理念與特色</a></li>
+                    <li><a href="#">師資介紹</a></li>
+                    <li><a href="#">教學資源與設備</a></li>
+                    <li><a href="#">畢業生進路</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">招生資訊 </a> </li>
+                <li><a href="#">最新消息 </a> </li>
+                <li><a href="#">課程規劃</a>
+                  <ul>
+                    <li><a href="#">課程架構</a></li>
+                    <li><a href="#">修業事項</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">歷史與文化產業學程</a> </li>
+                <li><a href="#">學術活動</a>
+                  <ul>
+                    <li><a href="#">白沙地理學報</a></li>
+                    <li><a href="#">白沙歷史地理研討會</a></li>
+                    <li><a href="#">白沙歷史地理學術講座</a></li>
+                    <li><a href="#">學人交流訪問動態</a></li>
+                    <li><a href="#">畢業生論文題目</a></li>
+                    <li><a href="#">白沙歷史地理工作坊</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">師生交流</a> </li>
+                <li><a href="#">主題專案</a>
+                  <ul>
+                    <li><a href="#">歷史學研究所所友會</a></li>
+                    <li><a href="#">教育部經典研讀計畫-水經注讀書會</a></li>
+                    <li><a href="#">教育部臺灣文史與藝術課程強化研發植根計畫：GIS在中學台灣歷史教學上的運用教師研習營</a></li>
+                    <li><a href="#">97年度發展卓越師資培育計畫-運用GIS促進歷史教學活潑化</a></li>
+                    <li><a href="#">教育部人文數位教學計畫-木質構造歷史建築保存特論</a></li>
+                    <li><a href="#">白沙歷史地理工作坊</a></li>
+                    <li><a href="#">歷史地圖繪製室</a></li>
+                    <li><a href="#">白沙歷史地理工作坊</a></li>
+                  </ul>
+                </li>
+                <li><a id="simple-menu" href="#sidr"><i class="fa fa-bars"></i></a></li>
+              </ul>
+            </div>
+            <!--kode nav_2 end--> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--kode navigation end--> 
+  </header>
+  <!--HEADER END-->
+  
+<div class="kf_inr_banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    	<!--KF INR BANNER DES Wrap Start-->
+                        <div class="kf_inr_ban_des">
+                        	<div class="inr_banner_heading">
+								<h3>本所理念與特色</h3>
+                        	</div>
+                           
+                            <div class="kf_inr_breadcrumb">
+								<ul>
+									<li><a href="#">首頁</a></li>
+									<li><a href="#">本所理念與特色</a></li>
+								</ul>
+							</div>
+                        </div>
+                        <!--KF INR BANNER DES Wrap End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="kf_content_wrap">
+    		<section>
+    			<div class="container">
+    				<div class="row">
+    					<div class="col-md-8">
+
+    						<!--KF_BLOG DETAIL_WRAP START-->
+    						<div class="kf_blog_detail_wrap">
+
+    							<!-- BLOG DETAIL THUMBNAIL START-->
+    							<div class="blog_detail_thumbnail">
+	    							<figure>
+	    								<img src="images/about.jpg" alt="">
+	    
+	    							</figure>
+	    						</div>
+	    						<!-- BLOG DETAIL THUMBNAIL END-->
+
+    							<!--KF_BLOG DETAIL_DES START-->
+    							<div class="kf_blog_detail_des">
+	    							<div class="blog-detl_heading">
+	    								<h5>本所理念與特色</h5>
+	    							</div>
+
+
+
+	    							<p>本所前身為本校共同學科歷史組。民國92年10月27日，教育部部准許本校於93學年度成立歷史學研究所。隔年4月14日，歷史學研究所籌備處成立，由蔡泰彬教授擔任籌備處主任，推動籌 備工作。民國93年8月1日，本所正式成立，蔡泰彬教授擔任首任所長。96年8月1日，由陳文豪副教授擔任第二任所長。102年8月1日，蔡泰彬教授出任第三任所長。104年10月1日，由李宗信副教授擔任第四任所長。</p>
+	    							<p class="margin-bottom">本所旨在培育經世致用的史學研究者、歷史教育人才、以及以傳承鄉土文化為志業的文化工作者。因此，本所以「歷史地理」（「臺灣歷史地理」為主、「中國歷史地理」為輔）做為主要發展目標，著重歷史地理等領域之研究；本所亦重視跨學科研究能力，除歷史專業科目外，並開設地理資訊科學（歷史GIS）、古典日文、現代日語、文化資產等多元化課程，裨使研究生具備結合人文與科技之研究視野，及編修地方志、經營鄉土文物館的能力。</p>
+
+
+
+	    						</div>
+	    						<!--KF_BLOG DETAIL_DES END-->
+
+	    						<!--KF_BLOG ABOUT AUTHOR START-->
+	    						<div class="about_autor">
+	    							<figure><img src="extra-images/author.jpg" alt=""></figure>
+	    							<div class="about-autor_des">
+	    								<h6><a href="#">本所辦學特色如下：</a></h6>
+	    								<p>以科際整合的方法從事歷史地理學研究。</p>
+										<p> 於國內各校歷史系所中首開歷史GIS基礎與進階課程，並擁有專屬之電腦教室(歷史地圖繪製室)，重視歷史之時空脈絡分析。 </p>
+										<p>擁有專屬的文化資產保存實驗室。 </p>
+										<p>開設古典日文及現代日語課程，訓練學生解讀日治時期檔案文書及日文史料。 </p>
+										<p>培養歷史師資、研究生可修習本校教育學程。 </p>
+										<p>著重田野調查，每學期安排史蹟考查及野外實察活動。</p> 
+										<p>定期舉辦「白沙歷史地理學術講座」、「白沙歷史地理學術研討會」、「白沙歷史地理工作坊」，刊行《白沙歷史地理學報》，以本所為中心，結合國內外學術社群，擴大學術網絡。</p>
+
+	    							</div>
+	    						</div>
+	    						<!--KF_BLOG ABOUT AUTHOR END-->
+
+
+
+
+
+    						</div>
+    						<!--KF_BLOG DETAIL_WRAP END-->
+    					</div>
+
+    					<!--KF_EDU_SIDEBAR_WRAP START-->
+    					<div class="col-md-4">
+    						<div class="kf-sidebar">
+
+
+
+    							<!--KF EDU SIDEBAR COURSES CATEGORieS WRAP START-->
+	    						<div class="widget widget-categories">
+	    							<h2>本所簡介</h2>
+									<ul>
+										<li><a href=""><i class="fa fa-caret-right"></i>本所理念與特色</a></li>
+										<li><a href=""><i class="fa fa-caret-right"></i>師資介紹</a></li>
+										<li><a href=""><i class="fa fa-caret-right"></i>教學資源與設備</a></li>
+										<li><a href=""><i class="fa fa-caret-right"></i>畢業生進路</a></li>
+
+									</ul>
+	    						</div>
+	    						<!--KF EDU SIDEBAR COURSES CATEGORieS WRAP END-->
+
+
+
+    						</div>
+    					</div>
+						<!--KF EDU SIDEBAR WRAP END-->
+
+    				</div>
+    			</div>
+    		</section>
+    	</div>  
+  <!--EDU2 FOOTER WRAP START--> 
+  <!--NEWS LETTERS START-->
+  <div class="edu2_ft_topbar_wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6"> </div>
+        <div class="col-md-6">
+          <div class="edu2_ft_topbar_des">
+            <form>
+              <input type="email" placeholder="輸入文字">
+              <button><i class="fa fa-search"></i>搜尋</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--NEWS LETTERS END--> 
+  <!--FOOTER START-->
+  <footer> 
+    <!--EDU2 FOOTER CONTANT WRAP START-->
+    <div class="container">
+      <div class="row"> 
+        <!--EDU2 FOOTER CONTANT DES START-->
+        <div class="col-md-3">
+          <div class="widget widget-links">
+            <h5>歷史學研究所</h5>
+            <ul>
+              <li><a href="#">本所理念與特色</a></li>
+              <li><a href="#">師資介紹</a></li>
+              <li><a href="#">教學資源與設備</a></li>
+              <li><a href="#">畢業生進路</a></li>
+              <li><a href="#">招生資訊</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--EDU2 FOOTER CONTANT DES END--> 
+        
+        <!--EDU2 FOOTER CONTANT DES START-->
+        <div class="col-md-3">
+          <div class="widget widget-links">
+            <h5>相關連結</h5>
+            <ul>
+              <li><a href="#">國立彰化師範大學</a></li>
+              <li><a href="#">師生交流</a></li>
+              <li><a href="#">歷史與文化產業學程</a></li>
+              <li><a href="#">主題專案</a></li>
+              <li><a href="#">資源下載</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--EDU2 FOOTER CONTANT DES END--> 
+        
+        <!--EDU2 FOOTER CONTANT DES START-->
+        <div class="col-md-3">
+          <div class="widget wiget-instagram">
+            <h5>Follow N.C.U.E. News</h5>
+            <div class="mod-b sep" data-usn-element-name="00000142-523d-deff-af66-5a3d7cfa0003" data-aid="a34109">
+              <ul class="bar-pad6 block">
+                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/490a609/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fc4%2F39%2F677999944687ac9ad6e43d137456%2Ffacebook-icon.png" alt="Facebook" srcset="http://www.usnews.com/dims4/USNEWS/490a609/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fc4%2F39%2F677999944687ac9ad6e43d137456%2Ffacebook-icon.png, http://www.usnews.com/dims4/USNEWS/978d219/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2Fc4%2F39%2F677999944687ac9ad6e43d137456%2Ffacebook-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
+                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/fd3ae02/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F67%2F7d%2Fb1d026154808be5169e12d9eea1a%2Ftwitter-icon.png" alt="Twitter" srcset="http://www.usnews.com/dims4/USNEWS/fd3ae02/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F67%2F7d%2Fb1d026154808be5169e12d9eea1a%2Ftwitter-icon.png, http://www.usnews.com/dims4/USNEWS/61220e8/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2F67%2F7d%2Fb1d026154808be5169e12d9eea1a%2Ftwitter-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
+                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/926d82f/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Ff9%2Fc6%2F77b52fad43989c86af1be633e5ca%2Fgoogle-icon.png" alt="Google+" srcset="http://www.usnews.com/dims4/USNEWS/926d82f/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Ff9%2Fc6%2F77b52fad43989c86af1be633e5ca%2Fgoogle-icon.png, http://www.usnews.com/dims4/USNEWS/2feb01a/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2Ff9%2Fc6%2F77b52fad43989c86af1be633e5ca%2Fgoogle-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
+                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/f278c30/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fea%2F0b%2Fc2989d554fc3ac3fc3c4ddc328c1%2Flinkedin-icon.png" alt="LinkedIn" srcset="http://www.usnews.com/dims4/USNEWS/f278c30/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fea%2F0b%2Fc2989d554fc3ac3fc3c4ddc328c1%2Flinkedin-icon.png, http://www.usnews.com/dims4/USNEWS/bc81333/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2Fea%2F0b%2Fc2989d554fc3ac3fc3c4ddc328c1%2Flinkedin-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
+                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/de32fca/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F88%2Fbe%2F99f2482541d7a2759e9ca9785d30%2Frss58x58.png" alt="rss58x58.png" srcset="http://www.usnews.com/dims4/USNEWS/de32fca/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F88%2Fbe%2F99f2482541d7a2759e9ca9785d30%2Frss58x58.png, http://www.usnews.com/dims4/USNEWS/5c04a78/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2F88%2Fbe%2F99f2482541d7a2759e9ca9785d30%2Frss58x58.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--EDU2 FOOTER CONTANT DES END--> 
+        
+        <!--EDU2 FOOTER CONTANT DES START-->
+        <div class="col-md-3">
+          <div class="widget widget-contact">
+            <h5>與我們聯絡</h5>
+            <ul>
+              <li>地址：500 彰化市進德路一號 </li>
+              <li>電話：(04) 721-1207， (04) 723-2105#1933</li>
+              <li>傳真：(04) 721-1254 </li>
+              <li>信箱： <a href="#"> lisa@cc.ncue.edu.tw</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--EDU2 FOOTER CONTANT DES END--> 
+      </div>
+    </div>
+  </footer>
+  <!--FOOTER END--> 
+  <!--COPYRIGHTS START-->
+  <div class="edu2_copyright_wrap">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div class="copyright_des"> <span>&copy; 國立彰化師範大學歷史學研究所，版權所有 © N.C.U.E. All rights reserved.</span>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--COPYRIGHTS START--> 
+</div>
+<!--KF KODE WRAPPER WRAP END--> 
+<!--Bootstrap core JavaScript--> 
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<!--Bx-Slider JavaScript--> 
+<script src="js/jquery.bxslider.min.js"></script> 
+<!--Owl Carousel JavaScript--> 
+<script src="js/owl.carousel.min.js"></script> 
+<!--Pretty Photo JavaScript--> 
+<script src="js/jquery.prettyPhoto.js"></script> 
+<!--Full Calender JavaScript--> 
+<script src="js/moment.min.js"></script> 
+<script src="js/fullcalendar.min.js"></script> 
+<script src="js/jquery.downCount.js"></script> 
+<!--Image Filterable JavaScript--> 
+<script src="js/jquery-filterable.js"></script> 
+<!--Accordian JavaScript--> 
+<script src="js/jquery.accordion.js"></script> 
+<!--Number Count (Waypoints) JavaScript--> 
+<script src="js/waypoints-min.js"></script> 
+<!--v ticker--> 
+<script src="js/jquery.vticker.min.js"></script> 
+<!--select menu--> 
+<script src="js/jquery.selectric.min.js"></script> 
+<!--Side Menu--> 
+<script src="js/jquery.sidr.min.js"></script> 
+<!--Custom JavaScript--> 
+<script src="js/custom.js"></script>
+</body>
+</html>

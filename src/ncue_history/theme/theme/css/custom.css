@@ -1,0 +1,23 @@
+.kf_inr_breadcrumb ul li > span {
+    color: #fff;
+}
+
+.kf_inr_banner {
+    background-image: url(++theme++ncue_history.theme/images/inrbg.jpg);
+}
+
+#edit-zone {
+    z-index: 100;
+}
+
+#portal-column-content {
+    padding: 0px;
+}
+
+#portal-column-content > div section{
+    padding: 0px;
+}
+.kf_inr_banner::before {
+    background: #A9A194 none repeat scroll 0 0;
+    opacity: 0.3;
+}

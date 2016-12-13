@@ -358,7 +358,7 @@ section,
 */
 #header_2{
 
-	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75); 
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.25); 
 	position: relative;
 	z-index: 10;
 }
@@ -572,7 +572,7 @@ section,
 	float: left;
 	width: 100%;
 	text-align: center;
-	margin-bottom: -9px;
+	margin-top: 20px;
 }
 .kf_edu_pagination_wrap .pagination{
 	float: none;
@@ -767,8 +767,8 @@ section,
 	float: left;
 	width: 100%;
 	text-align: :left;
-	padding:51px 0 54px;
-	background-image: url(images/inrbg.jpg);
+	padding:35px 0 35px;
+	background-image: url(../images/inrbg.jpg);
 	background-size: cover;
 	background-origin: center;
 	background-repeat: none-repeat;
@@ -783,8 +783,8 @@ section,
 	top:0;
 	bottom:0;
 	position:absolute;
-	background:#000000;
-	opacity:0.7;
+	background:#827268;
+	opacity:0.3;
 	z-index:-1;
 }
 .kf_inr_ban_des{
@@ -2282,7 +2282,7 @@ section,
 .widget-recent-posts li{
 	float: left;
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .widget-recent-posts ul li:last-child{
 	margin-bottom: 0;
@@ -2319,15 +2319,14 @@ section,
 
 }
 .widget-recent-posts span{
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: normal;
-	font-style: italic;
 	color: #999999;
 }
 .widget-recent-posts span i{
 	font-style: normal;
-	font-size: 16px;
-	margin-right: 5px;
+	font-size: 14px;
+	margin-right: 3px;
 }
 /*KF SIDE BAR RECENT POST WRAP END*/
 /*KF SIDE BAR CATEGORIES WRAP START*/
@@ -2351,9 +2350,9 @@ section,
 }
 .widget-categories ul li a{
 	font-weight: normal;
-	font-size: 14px;
+	font-size: 16px;
 	text-transform: capitalize;
-	color: #666;
+	color: #444;
 	padding: 8px 0px;
 	display: block;
 	line-height:normal;
@@ -3046,7 +3045,7 @@ section,
 .kf_event_list_wrap{
 	float: left;
 	width: 100%;
-	margin-bottom: 30px;
+	margin-bottom: 8px;
 	background-color:#f9f9f9; 
 }
 .kf_event_list_wrap:hover{
@@ -3099,7 +3098,7 @@ section,
 }
 .kf_event_list_des {
     float: left;
-    padding: 30px 30px 30px 0;
+    padding: 10px;
     width: 100%;
 }
 .kf_event_list_des h4{
@@ -4124,7 +4123,7 @@ section,
 	margin-bottom: 15px;
 }
 .blog-detl_heading h5{
-	font-weight: normal;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 .blog_detail_meta{
@@ -5396,8 +5395,8 @@ section,
 	margin-bottom:30px;
 }
 .col-md-4 .kf-sidebar{
-	padding:30px;
-	background:#f9f9f9;
+	padding: 0 30px 30px;
+
 	float:left;
 }
 
@@ -5750,4 +5749,7 @@ input:checked + .radio-value {
     padding-top: 2px;
     text-decoration: none;
     text-transform: uppercase;
+}
+.kode-text > span {
+    color: #999;
 }
