@@ -7,6 +7,7 @@
 
 
   <!-- Include the backend theme -->
+  <drop css:content="div.hero_banner" />
   <xi:include href="++theme++barceloneta/backend.xml" />
 
   <!-- Only theme front end pages -->
@@ -84,6 +85,10 @@
       />
     <drop css:content="span#breadcrumbs-you-are-here" />
 
+    <replace
+      css:content-children="div.hero_banner"
+      css:theme=".edu2_main_bn_wrap"
+      />
 
     <!-- CONTENT -->
     <drop css:theme-children=".gt_main_content_wrap" />
@@ -98,6 +103,7 @@
       css:content="#portal-siteactions"
       css:theme-children="footer"
       />
+
 
   </rules>
 
