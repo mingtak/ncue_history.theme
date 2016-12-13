@@ -1,0 +1,96 @@
+<div class="hero_banner">
+
+    <tal:hero condition="python:context.portal_type == 'Cover'">
+
+  <div class="edu2_main_bn_wrap" tal:define="heros python:context.hero_slides">
+    <div id="owl-demo-main" class="owl-carousel owl-theme">
+      <div class="item" tal:repeat="item heros">
+        <figure> <img tal:attributes="src string:${item/to_object/absolute_url}/@@images/image; alt item/to_object/title"/>
+          <figcaption> <span class="title"><a href="#"> 教育部經典研讀計畫-水經注讀書會</a></span> </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+    </tal:hero>
+
+    <tal:banner condition="python:context.portal_type != 'Cover'">
+
+<div class="kf_inr_banner" tal:define="breadcrumbs view/breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"> 
+          <!--KF INR BANNER DES Wrap Start-->
+          <div class="kf_inr_ban_des">
+            <div class="inr_banner_heading">
+              <h3 tal:content="python:context.title if context.portal_type == 'Folder' else context.getParentNode().title">最新消息 </h3>
+            </div>
+            <div class="kf_inr_breadcrumb">
+              <ul>
+                <li><a tal:attributes="href view/navigation_root_url">首頁</a></li>
+
+      <li tal:repeat="crumb breadcrumbs"
+          tal:attributes="id string:breadcrumbs-${repeat/crumb/number};">
+        <tal:item tal:define="is_last repeat/crumb/end;
+                                url crumb/absolute_url;
+                                title crumb/Title">
+          <a href="#"
+              tal:omit-tag="not: url"
+              tal:condition="python:not is_last"
+              tal:attributes="href url"
+              tal:content="title">
+                  crumb
+          </a>
+          <span id="breadcrumbs-current"
+                tal:condition="is_last"
+                tal:content="title">crumb</span>
+        </tal:item>
+      </li>
+
+              </ul>
+            </div>
+          </div>
+          <!--KF INR BANNER DES Wrap End--> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </tal:banner>
+
+</div>
+
+
+
+<nav id="portal-breadcrumbs" class="plone-breadcrumb"
+         i18n:domain="plone"
+         tal:define="breadcrumbs view/breadcrumbs">
+  <div class="container">
+
+    <span id="breadcrumbs-you-are-here" class="hiddenStructure"
+            i18n:translate="you_are_here">You are here:</span>
+    <ol aria-labelledby="breadcrumbs-you-are-here">
+      <li id="breadcrumbs-home">
+        <a i18n:translate="tabs_home"
+            tal:attributes="href view/navigation_root_url">Home</a>
+      </li>
+      <li tal:repeat="crumb breadcrumbs"
+          tal:attributes="id string:breadcrumbs-${repeat/crumb/number};">
+        <tal:item tal:define="is_last repeat/crumb/end;
+                                url crumb/absolute_url;
+                                title crumb/Title">
+          <a href="#"
+              tal:omit-tag="not: url"
+              tal:condition="python:not is_last"
+              tal:attributes="href url"
+              tal:content="title">
+                  crumb
+          </a>
+          <span id="breadcrumbs-current"
+                tal:condition="is_last"
+                tal:content="title">crumb</span>
+        </tal:item>
+      </li>
+    </ol>
+  </div>
+</nav>

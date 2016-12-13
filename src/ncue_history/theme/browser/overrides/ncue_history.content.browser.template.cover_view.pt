@@ -47,7 +47,7 @@ portal = api.portal.get()
               <!-- FORM START -->
               <div class="widget widget-recent-posts">
                 <ul class="sidebar_rpost_des"
-                    tal:define="folder python:portal.get('7')">
+                    tal:define="folder python:portal.get('event')">
                   <!--LIST ITEM START-->
 <tal:folder repeat="item python:folder.getChildNodes()">
                   <li tal:condition="python:item.portal_type == 'Folder'">
