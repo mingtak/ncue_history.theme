@@ -85,14 +85,14 @@
 
 <!-- Left Column -->
 <tal:lc condition="sl">
-    <div class="col-md-3 sticky-column">
+    <div class="col-md-4 sticky-column">
         <aside class="gt_aside_outer_wrap theiaStickySidebar">
             <tal:block replace="structure provider:plone.leftcolumn"/>
         </aside>
     </div>
 </tal:lc>
 
-      <div tal:attributes="class python:'col-md-6 sticky-column' if (sr and sl) else 'col-md-9 sticky-column' if (sr or sl) else 'col-md-12' ">
+      <div tal:attributes="class python:'col-md-4 sticky-column' if (sr and sl) else 'col-md-8 sticky-column' if (sr or sl) else 'col-md-12' ">
         <article id="content" class="theiaStickySidebar">
 
           <metal:bodytext define-slot="main">
@@ -134,7 +134,7 @@
 
 <!-- Right Column -->
 <tal:lc condition="sr">
-    <div class="col-md-3 sticky-column">
+    <div class="col-md-4 sticky-column">
         <aside class="gt_aside_outer_wrap theiaStickySidebar">
             <tal:block replace="structure provider:plone.rightcolumn"/>
         </aside>
