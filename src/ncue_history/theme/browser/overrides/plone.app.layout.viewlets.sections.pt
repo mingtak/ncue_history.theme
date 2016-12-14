@@ -1,3 +1,8 @@
+<?python
+from plone import api
+portal = api.portal.get()
+?>
+
 <tal:sections
      xmlns:tal="http://xml.zope.org/namespaces/tal"
      xmlns:metal="http://xml.zope.org/namespaces/metal"
@@ -33,6 +38,15 @@
                                      target tab/link_target|nothing;">
                     Tab Name
                   </a>
+                  <ul tal:define="folder python:portal.get(tab['id'])"
+                      tal:condition="python:folder and folder.portal_type == 'Folder'">
+                      <tal:li define="items python:folder.getChildNodes()"
+                              repeat="item items">
+                          <li tal:condition="python:item.portal_type == 'Folder'">
+                              <a href="${item/absolute_url}">${item/title}</a>
+                          </li>
+                      </tal:li>
+                  </ul>
               </li>
             </tal:tabs>
         </ul>
