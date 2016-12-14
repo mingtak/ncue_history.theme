@@ -10,6 +10,23 @@
 <metal:content-core fill-slot="content-core">
 <metal:block define-macro="content-core">
 
+<?python
+from plone import api
+portal = api.portal.get()
+?>
+
+<section>
+
+  <div metal:define-macro="text-field-view"
+      id="parent-fieldname-text" class="stx"
+      tal:define="text view/text"
+      tal:condition="text"
+      tal:attributes="class view/text_class">
+    <div metal:define-slot="inside" tal:replace="structure text">The body</div>
+  </div>
+
+
+<section>
   <div metal:define-macro="text-field-view"
       id="parent-fieldname-text" class="stx"
       tal:define="text view/text"
@@ -39,72 +56,24 @@
                 item_is_event python:view.is_event(obj);
                 item_has_image python:item.getIcon">
               <metal:block define-slot="entry">
-                <article class="entry">
-                  <header metal:define-macro="listitem" tal:attributes="class python:'vevent' if item_is_event else None">
-                    <span class="summary" tal:attributes="title item_type">
-                     <a tal:attributes="href item_link">
-                    	<img class="image-tile"
-                             tal:condition="item_has_image"                          
-                             tal:attributes="src  string:$item_url/@@images/image/tile">
-                      </a>
-                      <a tal:attributes="href item_link;
-                                         class string:$item_type_class $item_wf_state_class url;
-                                         title item_type"
-                          tal:content="item_title">
 
-                             Item Title
-                      </a>
-                     </span>
-                    <metal:block metal:define-macro="document_byline">
-                      <div class="documentByLine">
-                        <tal:event condition="item_is_event">
-                          <tal:date tal:replace="structure python:view.formatted_date(obj)"/>
-                          <span tal:condition="item/location" i18n:translate="label_event_byline_location">&mdash;
-                            <span tal:content="string:${item/location}" class="location" i18n:name="location">Oslo</span>,
-                          </span>
-                        </tal:event>
-                        <tal:byline condition="view/show_about">
-                          &mdash;
-                          <tal:name tal:condition="item_creator"
-                              tal:define="author python:view.pas_member.info(item_creator);
-                                          creator_short_form author/username;
-                                          creator_long_form string:?author=${author/username};
-                                          creator_is_openid python:'/' in creator_short_form;
-                                          creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];">
-                          <span i18n:translate="label_by_author">
-                            by
-                            <a tal:attributes="href string:${view/navigation_root_url}/author/${item_creator}"
-                                tal:content="author/name_or_id"
-                                tal:omit-tag="not:author"
-                                i18n:name="author">
-                              Bob Dobalina
-                            </a>
-                          </span>
-                          </tal:name>
 
-                          <tal:modified condition="python: item_type != 'Event'">
-                            &mdash;
-                            <tal:mod i18n:translate="box_last_modified">last modified</tal:mod>
-                            <span tal:replace="python:view.toLocalizedTime(item_modified,long_format=1)">
-                              August 16, 2001 at 23:35:59
-                            </span>
-                          </tal:modified>
 
-                          <metal:description define-slot="description_slot">
-                            <tal:comment replace="nothing">
-                              Place custom listing info for custom types here
-                            </tal:comment>
-                          </metal:description>
-                        </tal:byline>
-                      </div>
-                    </metal:block>
-                  </header>
-                  <p class="description discreet"
-                      tal:condition="item_description"
-                      tal:content="item_description">
-                    description
-                  </p>
-                </article>
+            <div class="kf_event_list_wrap">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <!--EVENT LIST DES Start-->
+                  <div class="kf_event_list_des">
+                    <div class="kode-text">
+                      <h6><a href="${item_url}" title="item_title"> ${item_title}</a></h6>
+                      <span><i class="fa fa-clock-o"></i><span tal:replace="python:item.created.strftime('%d %b, %Y')"/></span> </div>
+                  </div>
+                  <!--EVENT LIST DES END-->
+                </div>
+              </div>
+            </div>
+
+
               </metal:block>
             </tal:block>
           </tal:repeat>
@@ -124,6 +93,7 @@
 
     </tal:results>
   </metal:listingmacro>
+</section>
 
 </metal:block>
 </metal:content-core>
