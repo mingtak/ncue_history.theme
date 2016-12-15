@@ -23,9 +23,9 @@
               Item Title
             </a>
           </h2>
-
+<!--
           <div metal:use-macro="context/@@listing_view/macros/document_byline"></div>
-
+-->
           <div class="tileImage"
                tal:condition="item_has_image"
                tal:attributes="class python: 'tileImage' if item_description else 'tileImageNoFloat'">
