@@ -86,9 +86,9 @@
 <!-- Left Column -->
 <tal:lc condition="sl">
     <div class="col-md-4 sticky-column">
-        <aside class="gt_aside_outer_wrap theiaStickySidebar">
+        <div class="kf-sidebar gt_aside_outer_wrap theiaStickySidebar">
             <tal:block replace="structure provider:plone.leftcolumn"/>
-        </aside>
+        </div>
     </div>
 </tal:lc>
 
@@ -135,9 +135,9 @@
 <!-- Right Column -->
 <tal:lc condition="sr">
     <div class="col-md-4 sticky-column">
-        <aside class="gt_aside_outer_wrap theiaStickySidebar">
+        <div class="kf-sidebar gt_aside_outer_wrap theiaStickySidebar">
             <tal:block replace="structure provider:plone.rightcolumn"/>
-        </aside>
+        </div>
     </div>
 </tal:lc> 
 
