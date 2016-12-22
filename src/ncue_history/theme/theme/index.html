@@ -21,6 +21,8 @@
 <link href="css/selectric.css" rel="stylesheet">
 <link rel="stylesheet" href="css/jquery.sidr.dark.css">
 <link rel="stylesheet" href="css/custom.css">
+<link rel="shortcut icon" type="image/x-icon" href="../resource/images/ncue.ico" />
+<link rel="apple-touch-icon" href="../resource/images/touch.png" />
 </head>
 
 <body>
@@ -138,9 +140,9 @@
                 </ul>
               </div>
             </div>
-            <ul class="login_wrap">
+<!--            <ul class="login_wrap">
               <li><a href="#" data-toggle="modal" data-target="#signin-box"><i class="fa fa-sign-in"></i>登入</a></li>
-            </ul>
+            </ul> -->
             <ul class="top_nav">
               <li><a href="#">學校首頁</a></li>
               <li><a href="#">下載資源</a></li>
@@ -375,7 +377,7 @@
                   </figure>
                   <div class="edu2_faculty_des2">
                     <h6><a href="#">教學資源與設備</a></h6>
-                    <p>本校歷史學研究所位於進德校區白沙大樓東側，擁有豐富的教學資源與設備...</p>
+                    <p>本校歷史學研究所位於進德校區白沙大樓東側，擁有教學圖書室、教學研究實驗室等資源設備...</p>
                     <a href="#">更多介紹</a> </div>
                 </div>
                 <!-- FACULTY DES END--> 
@@ -411,8 +413,8 @@
         <div class="col-md-6"> </div>
         <div class="col-md-6">
           <div class="edu2_ft_topbar_des">
-            <form>
-              <input type="email" placeholder="輸入文字">
+            <form action="/@@search" method="get">
+              <input type="text" placeholder="站內搜尋" name="SearchableText">
               <button><i class="fa fa-search"></i>搜尋</button>
             </form>
           </div>

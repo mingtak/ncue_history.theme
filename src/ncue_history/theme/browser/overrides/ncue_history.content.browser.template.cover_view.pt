@@ -31,8 +31,9 @@ portal = api.portal.get()
                 <!--COURSE CATEGORIES WRAP HEADING END--> 
                 
                 <!--COURSE CATEGORIES DES START-->
-                <div class="item" style="visibility: visible;"> <img src="http://history.ncue.edu.tw/images/header.png"  class="img-responsive">
-                  <div class="image-caption"> <img src="http://history.ncue.edu.tw/images/history.gif" class="img-responsive"> </div>
+                <div class="item" style="visibility: visible;">
+                  <img src="${portal/absolute_url}/resource/images/braudel.png/@@images/image"  class="img-responsive">
+                 <!-- <div class="image-caption"> <img src="http://history.ncue.edu.tw/images/history.gif" class="img-responsive"> </div> -->
                 </div>
               </div>
               <!--COURSE CATEGORIES WRAP END--> 

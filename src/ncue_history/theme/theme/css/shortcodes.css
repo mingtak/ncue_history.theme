@@ -66,7 +66,7 @@
 .blog_pg_form form button:hover,
 .convocation_link:hover,
 .kf_convocation_des a:hover,
-.edu2_ft_topbar_des form button:hover,
+
 .kf_edu2_tab_des .btn-3:hover,
 .loadmore a:hover,
 .contact_2 button:hover
@@ -74,6 +74,11 @@
     background-color: #000000;
     color: #fff;
     border-color: #000000 !important;
+}
+.edu2_ft_topbar_des form button:hover{
+    background-color: #827268;
+    color: #fff;
+    border-color: #827268 !important;
 }
 /*COURSES LIST PAGE IMG EFFEC START*/
 .kf_courses_wrap  figure:before{

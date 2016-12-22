@@ -3,7 +3,7 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  *//*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html {
-	font-family: sans-serif;
+	font-family: "Open Sans",Arial,"微軟正黑體",sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%
 }
@@ -81,7 +81,7 @@ pre {
 	overflow: auto
 }
 code, kbd, pre, samp {
-	font-family: monospace, monospace;
+	font-family: "Open Sans",Arial,"微軟正黑體",sans-serif;
 	font-size: 1em
 }
 button, input, optgroup, select, textarea {
@@ -1025,7 +1025,7 @@ html {
 	-webkit-tap-highlight-color: rgba(0,0,0,0)
 }
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans",Arial,"微軟正黑體",sans-serif;
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333;
@@ -1356,7 +1356,7 @@ address {
 	line-height: 1.42857143
 }
 code, kbd, pre, samp {
-	font-family: Menlo, Monaco, Consolas, "Courier New", monospace
+	font-family: "Open Sans",Arial,"微軟正黑體",sans-serif;
 }
 code {
 	padding: 2px 4px;
@@ -1424,7 +1424,7 @@ pre code {
 }
 @media (min-width:1200px) {
 .container {
-	width: 1170px
+	width: 1190px
 }
 }
 .container-fluid {
@@ -2990,7 +2990,7 @@ tbody.collapse.in {
 	z-index: 1000;
 	display: none;
 	float: left;
-	min-width: 160px;
+	min-width: 120px;
 	padding: 5px 0;
 	margin: 2px 0 0;
 	font-size: 14px;
@@ -3001,7 +3001,6 @@ tbody.collapse.in {
 	background-clip: padding-box;
 	border: 1px solid #ccc;
 	border: 1px solid rgba(0,0,0,.15);
-	border-radius: 4px;
 	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
 	box-shadow: 0 6px 12px rgba(0,0,0,.175)
 }
@@ -3025,9 +3024,9 @@ tbody.collapse.in {
 	white-space: nowrap
 }
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-	color: #262626;
+	color: #ffffff;
 	text-decoration: none;
-	background-color: #f5f5f5
+	background-color: #bdb3a2;
 }
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
 	color: #fff;
@@ -4032,7 +4031,8 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	padding: 6px 12px;
 	margin-left: -1px;
 	line-height: 1.42857143;
-	color: #337ab7;
+	color: #555555;
+	font-size: 14px;
 	text-decoration: none;
 	background-color: #fff;
 	border: 1px solid #ddd
@@ -4048,16 +4048,16 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 }
 .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
 	z-index: 3;
-	color: #23527c;
-	background-color: #eee;
-	border-color: #ddd
+	color: #fff;
+	background-color: #bbb;
+	border-color: #bbb
 }
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
 	z-index: 2;
 	color: #fff;
 	cursor: default;
-	background-color: #337ab7;
-	border-color: #337ab7
+	background-color: #86AB1D;
+	border-color: #86AB1D
 }
 .pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
 	color: #777;
@@ -5090,7 +5090,7 @@ button.close {
 	position: absolute;
 	z-index: 1070;
 	display: block;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans",Arial,"微軟正黑體",sans-serif;
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 400;
@@ -5208,7 +5208,7 @@ button.close {
 	display: none;
 	max-width: 276px;
 	padding: 1px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans",Arial,"微軟正黑體",sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
@@ -5457,7 +5457,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', end
 .carousel-control .icon-next, .carousel-control .icon-prev {
 	width: 20px;
 	height: 20px;
-	font-family: serif;
+	font-family: "Open Sans",Arial,"微軟正黑體",sans-serif;
 	line-height: 1
 }
 .carousel-control .icon-prev:before {

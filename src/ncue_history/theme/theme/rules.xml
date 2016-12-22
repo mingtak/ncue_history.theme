@@ -51,6 +51,14 @@
       css:theme-children="html body"
       />
 -->
+
+    <!-- Header Info -->
+    <replace
+      css:content=".top_bar_2"
+      css:theme=".top_bar_2"
+      />
+
+
     <!-- LOGO -->
     <replace
       css:content="#portal-logo"
@@ -71,12 +79,12 @@
       />
 
     <!-- USER NAME (FOR LOGGED-IN USERS) -->
-    <replace
+<!--    <replace
       if-content="not(//li[@id='anon-personalbar'])"
       content="//a[@id='user-name']/text()"
       css:theme="#user-name"
       />
-
+-->
 <!-- not yet -->
     <!-- BREADCRUMBS -->
     <replace
@@ -99,8 +107,13 @@
       />
 
     <!-- FOOTER -->
+    <drop css:content="footer"/>
     <replace
       css:content="#portal-siteactions"
+      css:theme-children="footer"
+      />
+    <after
+      css:content-children="div.footer-info"
       css:theme-children="footer"
       />
 

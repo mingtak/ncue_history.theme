@@ -1,23 +1,259 @@
-.kf_inr_breadcrumb ul li > span {
-    color: #fff;
+a:hover{
+   color: #E67918;
+}   
+.fa-clock-o::before {
+    display: none;
 }
-
-.kf_inr_banner {
-    background-image: url(++theme++ncue_history.theme/images/inrbg.jpg);
-}
-
 #edit-zone {
     z-index: 100;
 }
-
+#content-core  img {
+    width: auto;
+}
 #portal-column-content {
     padding: 0px;
 }
 
 #portal-column-content > div section{
-    padding: 0px;
+    padding: 10px 0 0;
 }
-.kf_inr_banner::before {
-    background: #A9A194 none repeat scroll 0 0;
+.edu2_ft_topbar_des form input[type="text"] {
+    background-color: transparent;
+    border: 1px solid #EBE8E3;
+    box-shadow: none;
+    color: #fff;
+    float: left;
+    font-size: 15px !important;
+    height: 50px;
+    padding: 7px 125px 7px 15px;
+    text-transform: capitalize;
+    width: 100%;
+}
+.edu2_ft_topbar_des form input[type="text"]:focus {
+    border-color: #fff !important;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+#results-count{
+    font-size: 20px;
+	font-weight: bold;
+}	
+.searchResults{
+    margin-top: 10px;
+}
+#searchResultsSort {
+    border-bottom: 2px solid #ccc;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.searchResults > li {
+    border-bottom: 1px dotted #999;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.documentLocation{
+    font-size: 13px;
+	font-style:normal;
+}
+.searchResults > li > dd {
+    padding-top: 10px;
+}
+
+#breadcrumbs-current {
+    color: #ddd;
+    font-size: 14px;
+}
+#portaltab-index_html > a {
+    display: none;
+}
+.portletHeader {
+    color: #735c4c;
+    font-size: 18px;
+}
+.widget-archive ul li a::before {
+    color: #a49b94;
+    content: "";
+    font-family: FontAwesome;
+    font-size: 16px;
+    left: 0;
+    padding-right: 5px;
+}
+.widget.widget-links  > h5 {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+}
+footer .widget h5 {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+}
+.section-event .kf_inr_banner::before {
+    background: #000 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.15;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+.section-event .kf_inr_banner {
+    background-image: url("../images/event.jpg");
+    background-position: center center;
+    background-size: cover;
+    float: left;
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.section-admissions .kf_inr_banner {
+    background-image: url("../images/admissions.jpg");
+    background-position: center center;
+    background-size: cover;
+    float: left;
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.section-news .kf_inr_banner {
+    background-image: url("../images/news.jpg");
+    background-position: center center;
+    background-size: cover;
+    float: left;
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.section-history_culture .kf_inr_banner {
+    background-image: url("../images/history_culture.jpg");
+    background-position: center center;
+    background-size: cover;
+    float: left;
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.section-course .kf_inr_banner {
+    background-image: url("../images/course.jpg");
+    background-position: center center;
+    background-size: cover;
+    float: left;
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.section-exchanges .kf_inr_banner {
+    background-image: url("../images/exchanges.jpg");
+    background-position: center center;
+    background-size: cover;
+    float: left;
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.section-project .kf_inr_banner::before {
+    background: #000 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    left: 0;
     opacity: 0.3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
 }
+.section-project .kf_inr_banner {
+    background-image: url("../images/project.jpg");
+    background-position: center center;
+    background-size: cover;
+    float: left;
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.tileHeadline {
+    font-size: 20px;
+}
+.tileItem {
+    border-bottom: 1px dotted #b2a296;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+	padding-top: 10px;
+}
+.tileFooter {
+    display: none;
+}
+
+#teacher{
+    border-bottom: 2px dotted #bbb;
+    margin-bottom: 30px;
+    position: relative;
+}
+.fixed .post-meta {
+    float: left;
+    margin: 0 20px 8px 0;
+    width: 100px;
+}
+.post-content.fixed {
+    float: left;
+    width:635px;
+}
+.post-content > p {
+    letter-spacing: 0.02em;
+}
+.post-title, .post-title a {
+    color: #444;
+    font-size: 17px;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+.clearfix::before, .clearfix::after, .cf::before, .cf::after {
+    content: "";
+    display: block;
+    overflow: hidden;
+}
+.clearfix::after, .cf::after {
+    clear: both;
+}
+.clearfix::before, .clearfix::after, .cf::before, .cf::after {
+    content: "";
+    display: block;
+    overflow: hidden;
+}
+/*
+=================================================
+			media RWD
+=================================================
+*/
+@media (max-width: 480px) {
+.section-admissions .kf_inr_banner {
+	padding: 30px 0;
+}
+.section-news .kf_inr_banner {
+	padding: 30px 0;
+}
+.section-history_culture .kf_inr_banner {
+	padding: 30px 0;
+}
+.section-course .kf_inr_banner {
+	padding: 30px 0;
+}
+.section-event .kf_inr_banner {
+	padding: 30px 0;
+}
+.section-exchanges .kf_inr_banner {
+	padding: 30px 0;
+}
+}
+/*=================================================*/

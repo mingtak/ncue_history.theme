@@ -118,7 +118,8 @@
                         <ul class="searchResults">
                           <tal:results repeat="item batch">
                             <li tal:define="hasIcon item/getIcon">
-                              <span class="result-title">
+                              <dt>
+                               <span class="result-title">
                                 <img class="image-icon"
                                      tal:condition="hasIcon"
                                      tal:attributes="src string:${item/getURL}/@@images/image/icon;">
@@ -128,7 +129,8 @@
                                    tal:attributes="href python:item_type in use_view_action and (item_url + '/view') or item_url;
                                                    class string:state-${item/review_state}"
                                    tal:content="python:item.getDataOrigin().pretty_title_or_id()" />
-                              </span>
+                               </span>
+                              </dt>
                               <span class="discreet" i18n:domain="plone"
                                     tal:condition="show_about">
                                 <span class="documentAuthor"
@@ -185,6 +187,7 @@
                                 Cropped description
                               </p>
 
+                             <dd>
                               <cite class="documentLocation link-location"
                                     tal:define="breadcrumbs python: view.breadcrumbs(item);
                                                 is_rtl context/@@plone_portal_state/is_rtl;"
@@ -205,6 +208,7 @@
                                   </tal:item>
                                 </span>
                               </cite>
+                             </dd>
                             </li>
                           </tal:results>
                         </ul>

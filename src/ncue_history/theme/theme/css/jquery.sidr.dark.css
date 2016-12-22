@@ -4,11 +4,12 @@
 	top: 0;
 	height: 100%;
 	z-index: 999999;
-	width: 350px;
+	width: 260px;
 	overflow-x: none;
 	overflow-y: auto;
 	font-size: 15px;
 	background: #1c1c1c;
+	opacity: 0.95;
 	color: #fff;
 	padding:30px;
 }
@@ -54,11 +55,12 @@
 .sidr ul {
 	display: block;
 	margin: 0 0 15px;
-	padding: 0;
+	padding: 0 0 5px;
+	font-size: 16px;
 }
 .sidr ul li {
 	display: block;
-	margin: 0;
+	margin: 4px;
 }
 .sidr ul li:hover, .sidr ul li.active, .sidr ul li.sidr-class-active {
 }
@@ -76,14 +78,23 @@
 .sidr ul li ul {
 	border-bottom: none;
 	margin: 0;
-	background:rgba(0,0,0,0.3)
+	/*background:rgba(0,0,0,0.3)*/
 }
 .sidr ul li ul li {
 	line-height: 40px;
-	font-size: 13px
+	font-size: 15px
 }
 .sidr ul li ul li:last-child {
 
+}
+
+.sidr ul li  ul li a::before {
+    color: #a49b94;
+    content: "";
+    font-family: FontAwesome;
+    font-size: 16px;
+    left: 0;
+    padding-right: 5px;
 }
 .sidr ul li ul li:hover, .sidr ul li ul li.active, .sidr ul li ul li.sidr-class-active {
 
@@ -94,7 +105,7 @@
 }
 .sidr ul li ul li a, .sidr ul li ul li span {
 	color: rgba(255,255,255,0.8);
-	padding-left: 30px
+	padding-left: 15px
 }
 .sidr form {
 	margin: 0;

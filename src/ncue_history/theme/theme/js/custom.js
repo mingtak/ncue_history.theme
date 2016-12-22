@@ -206,12 +206,12 @@ jQuery(document).ready(function($){
     ==============================================================
        BXSLider Script Start
     ============================================================== */
-	if($('.bxslider').length){
-		$('.bxslider').bxSlider({
-		  pagerCustom: '#bx-pager'
-		});
-	}
+    $('.bxslider').bxSlider({
+        adaptiveHeight: true,
+        auto: true,
+        controls: true,
 
+    });
     /*
     ==============================================================
        PROGRESS BAR Script Start
