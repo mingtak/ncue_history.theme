@@ -21,6 +21,25 @@
   </div>
 
   <metal:listingmacro define-macro="listing">
+
+<!--測試 bxslider -->
+<h1>以下測試</h1>
+<ul class="ncue-bxslider">
+  <li tal:repeat="image images">
+    <img src="${image/getURL}/@@images/image/preview" />
+  </li>
+</ul>
+
+
+<div id="ncue-bx-pager">
+  <a tal:repeat="image images"
+     data-slide-index="${repeat/image/index}" href=""><img src="${image/getURL}/@@images/image/tile" /></a>
+</div>
+
+<h1>以上測試</h1>
+
+<!--測試 bxslider -->
+ 
   <tal:images tal:repeat="image images">
     <div class="photoAlbumEntry"
          tal:define="ob image/getObject;

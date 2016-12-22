@@ -24,7 +24,7 @@
 
 <body>
 
-  <div id="content-core" metal:fill-slot="main">
+  <section id="content-core" metal:fill-slot="main">
 
     <form name="searchform"
           id="searchform"
@@ -37,115 +37,6 @@
                       DateTime python:modules['DateTime'].DateTime;
                       navigation_root_url view/navroot_url;">
 
-        <input type="hidden" name="advanced_search" value="False" />
-        <input type="hidden" name="sort_on" value="" />
-        <input type="hidden" name="sort_order" value="" />
-
-        <div class="input-group">
-          <input class="searchPage form-control"
-                 name="SearchableText"
-                 type="text"
-                 size="25"
-                 title="Search Site"
-                 i18n:attributes="title title_search_title;"
-                 tal:attributes="value st;"
-                 />
-          <span class="input-group-btn">
-            <input class="searchPage allowMultiSubmit btn btn-primary" type="submit"
-                   value="Search"
-                   i18n:attributes="value label_search;" />
-          </span>
-        </div>
-
-        <dl class="actionMenu"
-            tal:attributes="class python:view.show_advanced_search() and 'actionMenu activated' or 'actionMenu'">
-
-          <dt class="actionMenuHeader">
-            <input type="hidden" id="advanced-search-input" name="advanced_search"
-                   tal:attributes="value python: view.show_advanced_search() and 'True' or 'False'" />
-            <button
-                 id="search-filter-toggle"
-                 i18n:translate="narrow_search_options">
-                  Filter the results
-            </button>
-          </dt>
-          <dd class="actionMenuContent">
-            <div id="search-filter" i18n:domain="plone">
-              <fieldset class="noborder">
-                <legend i18n:translate="label_item_type">Item type</legend>
-                  <div class="field"
-                       tal:define="portal_types portal/portal_types;
-                                   types_list view/types_list;
-                                   all_checked python:(len(types_list) == len(request.get('portal_type', []))) or first_call;
-                                   toggle_select_state python:all_checked and 'true' or 'false';">
-                    <div class="optionsToggle">
-                      <input type="checkbox" onchange="" name="pt_toggle" value="#" id="pt_toggle" class="noborder" checked="checked"
-                             tal:attributes="checked python:all_checked and 'checked' or '';" />
-
-                      <label for="pt_toggle"
-                             i18n:translate="label_toggle">Select All/None</label>
-                    </div>
-                    <div class="search-type-options">
-                      <tal:div tal:define="typeLists python:context.createMultiColumnList(types_list, numCols=2, sort_on='self');"
-                               tal:repeat="sublist typeLists">
-                        <tal:items repeat="type sublist">
-                          <div>
-                            <input type="checkbox" name="portal_type:list" value="#" class="noborder" checked="checked"
-                                   tal:attributes="value type;
-                                                   id string:portal_type_${repeat/sublist/number}_${repeat/type/number};
-                                                   checked python:((type in request.get('portal_type', [])) or first_call) and 'checked' or ''"/>
-                              <label for="" i18n:translate=""
-                                     tal:attributes="for string:portal_type_${repeat/sublist/number}_${repeat/type/number}"
-                                     tal:content="python: portal_types.getTypeInfo(type).Title()" />
-                          </div>
-                        </tal:items>
-                      </tal:div>
-                    </div>
-                  </div>
-                </fieldset>
-                <fieldset class="noborder">
-                  <legend i18n:translate="label_new_items_since">New items since</legend>
-                  <div class="field">
-                    <div class="search-date-options">
-                      <tal:datetime define="today python:DateTime().earliestTime();
-                                            yesterday python:(today-1).Date();
-                                            lastweek python:(today-7).Date();
-                                            lastmonth python:(today-31).Date();
-                                            ever string:1970-01-02;
-                                            checked python:request.get('created', []);
-                                            checked python:(len(checked) == 1) and checked[0] or ever">
-                        <div>
-                          <input type="radio" id="query-date-yesterday" name="created.query:record:list:date"
-                                 tal:attributes="value yesterday;
-                                                 checked python:checked==yesterday and 'checked' or '';" />
-                          <label for="query-date-yesterday" i18n:translate="time_yesterday">Yesterday</label>
-                        </div>
-                        <div>
-                          <input type="radio" id="query-date-lastweek" name="created.query:record:list:date"
-                                 tal:attributes="value lastweek;
-                                                 checked python:checked==lastweek and 'checked' or '';" />
-                          <label for="query-date-lastweek" i18n:translate="time_last_week">Last week</label>
-                        </div>
-                        <div>
-                          <input type="radio" id="query-date-lastmonth" name="created.query:record:list:date"
-                                 tal:attributes="value lastmonth;
-                                                 checked python:checked==lastmonth and 'checked' or '';" />
-                          <label for="query-date-lastmonth" i18n:translate="time_last_month">Last month</label>
-                        </div>
-                        <div>
-                          <input type="radio" id="query-date-ever" name="created.query:record:list:date"
-                                 tal:attributes="value ever;
-                                                 checked python:checked==ever and 'checked' or '';" />
-                          <label for="query-date-ever" i18n:translate="time_ever">Ever</label>
-                        </div>
-                      </tal:datetime>
-                    </div>
-                    <input type="hidden" name="created.range:record" value="min" />
-                  </div>
-                </fieldset>
-              </div>
-            </dd>
-          </dl>
 
         <div>
           <div>
@@ -162,7 +53,7 @@
                 Search Term
               </strong>
             </h1>
-
+<br>
             <p id="rss-subscription" i18n:domain="plone"
                tal:define="syndication context/@@tools/syndication|nothing"
                tal:condition="syndication/isSiteSyndicationAllowed|nothing">
@@ -224,7 +115,7 @@
                                                  use_view_action python:context.portal_registry.get('plone.types_use_view_action_in_listings', []);
                                                  allowAnonymousViewAbout python:context.portal_registry['plone.allow_anon_views_about'];
                                                  show_about python:not isAnon or allowAnonymousViewAbout;">
-                        <ol class="searchResults">
+                        <ul class="searchResults">
                           <tal:results repeat="item batch">
                             <li tal:define="hasIcon item/getIcon">
                               <span class="result-title">
@@ -316,7 +207,7 @@
                               </cite>
                             </li>
                           </tal:results>
-                        </ol>
+                        </ul>
                         <div metal:use-macro="context/batch_macros/macros/navigation" />
                       </metal:results>
                     </div>
@@ -331,7 +222,7 @@
 
     <script type="text/javascript" src="${context/portal_url}/++resource++search.js">
     </script>
-  </div>
+  </section>
 
 </body>
 </html>

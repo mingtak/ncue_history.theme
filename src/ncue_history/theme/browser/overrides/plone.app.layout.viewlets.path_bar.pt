@@ -5,8 +5,11 @@
   <div class="edu2_main_bn_wrap" tal:define="heros python:context.hero_slides">
     <div id="owl-demo-main" class="owl-carousel owl-theme">
       <div class="item" tal:repeat="item heros">
-        <figure> <img tal:attributes="src string:${item/to_object/absolute_url}/@@images/image; alt item/to_object/title"/>
-          <figcaption> <span class="title"><a href="#"> 教育部經典研讀計畫-水經注讀書會</a></span> </figcaption>
+        <figure>
+            <a href="${python:context.hero_link.split()[repeat['item'].index]}">
+                <img tal:attributes="src string:${item/to_object/absolute_url}/@@images/image; alt item/to_object/title"/>
+            </a>
+          <figcaption> <span class="title"><a href="${python:context.hero_link.split()[repeat['item'].index]}" > 教育部經典研讀計畫-水經注讀書會</a></span> </figcaption>
         </figure>
       </div>
     </div>
