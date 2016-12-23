@@ -6,10 +6,16 @@
     <div id="owl-demo-main" class="owl-carousel owl-theme">
       <div class="item" tal:repeat="item heros">
         <figure>
-            <a href="${python:context.hero_link.split()[repeat['item'].index]}">
+            <a href="${python:context.hero_link[repeat['item'].index].to_path}">
                 <img tal:attributes="src string:${item/to_object/absolute_url}/@@images/image; alt item/to_object/title"/>
             </a>
-          <figcaption> <span class="title"><a href="${python:context.hero_link.split()[repeat['item'].index]}" > 教育部經典研讀計畫-水經注讀書會</a></span> </figcaption>
+          <figcaption>
+              <span class="title">
+                  <a href="${python:context.hero_link[repeat['item'].index].to_path}">
+                    ${python:context.hero_link[repeat['item'].index].to_object.title}
+                  </a>
+              </span>
+          </figcaption>
         </figure>
       </div>
     </div>
