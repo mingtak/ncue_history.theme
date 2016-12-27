@@ -50,7 +50,7 @@ portal = api.portal.get()
                 <ul class="sidebar_rpost_des"
                     tal:define="folder python:portal.get('event')">
                   <!--LIST ITEM START-->
-<tal:folder repeat="item python:folder.getChildNodes()">
+<tal:folder repeat="item python:list(folder.getChildNodes())[0:6]">
                   <li tal:condition="python:item.portal_type == 'Folder'">
                     <div class="kode-text">
                       <h6><a tal:attributes="href item/absolute_url; title item/title" tal:content="item/title"> 105學年度第一學期第8次專題演講</a></h6>
