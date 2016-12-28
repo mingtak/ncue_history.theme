@@ -12,7 +12,7 @@
           <figcaption>
               <span class="title">
                   <a href="${python:context.hero_link[repeat['item'].index].to_path}">
-                    ${python:context.hero_link[repeat['item'].index].to_object.title}
+                    ${python:item.to_object.title}
                   </a>
               </span>
           </figcaption>

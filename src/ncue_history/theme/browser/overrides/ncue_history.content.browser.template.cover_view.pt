@@ -22,22 +22,21 @@ portal = api.portal.get()
     <div class="kf_course_outerwrap">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <div class="row"> 
-              <!--COURSE CATEGORIES WRAP START-->
-              <div class="kf_cur_catg_wrap"> 
-                <!--COURSE CATEGORIES WRAP HEADING START-->
-                <div class="col-md-12"> </div>
-                <!--COURSE CATEGORIES WRAP HEADING END--> 
-                
-                <!--COURSE CATEGORIES DES START-->
-                <div class="item" style="visibility: visible;">
-                  <img src="${portal/absolute_url}/resource/images/braudel.png/@@images/image"  class="img-responsive">
-                 <!-- <div class="image-caption"> <img src="http://history.ncue.edu.tw/images/history.gif" class="img-responsive"> </div> -->
-                </div>
-              </div>
-              <!--COURSE CATEGORIES WRAP END--> 
-            </div>
+          <div class="col-md-4"> 
+              <div class="broadcast_wrap"> 
+                  <div class="broadcast"> 
+                      <ul class="broadcast_post"> 
+                          <li class="quot"> 
+                              <blockquote> 
+                                  <p>“要強制地理學者，使他們多注意時間的因素；要強制史學家，優先考慮空間的因素。”</p> 
+                                  <p><em>- F.Braudel (賴建誠譯 1996)</em></p>
+                              </blockquote> 
+                          </li> 
+                          <li class="banner_box"><a href="http://history.babywith.me/journal"><img alt="" title="grant-search-c.jpg" class="image-inline" src="../resource/images/banner_baisha.jpg" width="100%"></a> </li> 
+                          <li class="banner_box"><a href="http://history.babywith.me/thesis"><img alt="" title="" class="image-inline" src="../resource/images/banner_thesis.jpg" width="100%"></a> </li> 
+                      </ul> 
+                  </div>
+              </div> 
           </div>
           <div class="col-md-4"> 
             <!-- EDU2 SEARCH WRAP START -->
@@ -50,11 +49,11 @@ portal = api.portal.get()
                 <ul class="sidebar_rpost_des"
                     tal:define="folder python:portal.get('event')">
                   <!--LIST ITEM START-->
-<tal:folder repeat="item python:list(folder.getChildNodes())[0:6]">
-                  <li tal:condition="python:item.portal_type == 'Folder'">
+<tal:folder repeat="item python:api.content.find(context=folder, Type=['Folder', 'Document', 'Page', 'News Item'], sort_on='modified', sort_order='reverse')[0:5]">
+                  <li>
                     <div class="kode-text">
-                      <h6><a tal:attributes="href item/absolute_url; title item/title" tal:content="item/title"> 105學年度第一學期第8次專題演講</a></h6>
-                      <span><i class="fa fa-clock-o"></i><span tal:replace="python:item.modified().strftime('%d %b, %Y')">10 Jan, 2016</span></span>
+                      <h6><a href="${item/getURL}" title="${item/Title}">${item/Title}</a></h6>
+                      <span><i class="fa fa-clock-o"></i>${python:item.modified.strftime('%Y年%m月%d日')}</span>
 <!--                      <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span> -->
                     </div>
                   </li>
@@ -76,12 +75,12 @@ portal = api.portal.get()
               <!-- FORM START -->
               <div class="widget widget-recent-posts">
                 <ul class="sidebar_rpost_des"
-                    tal:define="news python:api.content.find(context=portal, Type='News Item', sort_on='created', sort_order='reverse')">
+                    tal:define="news python:api.content.find(context=portal, Type='News Item', sort_on='modified', sort_order='reverse')">
                   <!--LIST ITEM START-->
-                  <li tal:repeat="item python:news[0:6]">
+                  <li tal:repeat="item python:news[0:5]">
                     <div class="kode-text">
                       <h6><a tal:attributes="href item/getURL; title item/Title" tal:content="item/Title"> 105學年度第一學期第8次專題演講</a></h6>
-                      <span><i class="fa fa-clock-o"></i><span tal:replace="python:item.created.strftime('%d %b, %Y')">10 Jan, 2016</span></span> </div>
+                      <span><i class="fa fa-clock-o"></i>${python:item.modified.strftime('%Y年%m月%d日')}</span> </div>
                   </li>
                   <!--LIST ITEM START-->
                 </ul>

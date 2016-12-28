@@ -32,7 +32,7 @@ body {
     font-size: 16px;
 	line-height:30px;
     background-color: #FBFBF9;
-	background-image: url("extra-images/bk-gradient.jpg");  
+ 
 	background-position: center top;
     background-repeat: repeat-x;
 }
@@ -52,7 +52,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 h2 {
@@ -135,7 +135,7 @@ figure {
 }
 figure img{
 	float:left;
-	width:100%;
+	width:auto;
 }
 img {
     max-width: 100%;
@@ -214,7 +214,7 @@ table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table
     border: 1px solid #dddddd;
     line-height: 2.1;
     padding-left: 7px;
-    vertical-align: top;
+    vertical-align: middle;
 }
 table thead tr th {
     border-top: 1px solid #d2d2d2;

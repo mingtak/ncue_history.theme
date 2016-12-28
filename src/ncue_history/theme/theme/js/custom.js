@@ -1,5 +1,7 @@
 jQuery(document).ready(function($){
 	"use strict";
+    $("#owl-demo-8").attr("style", "width:97%");
+
 	
 	/*
     ==============================================================

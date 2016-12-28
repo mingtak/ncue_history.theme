@@ -43,19 +43,12 @@
         </a>
     </li>
     </tal:events>
+    <div>
+        <a class="showmore" tal:attributes="href collection_url">
+           <span class="pull-right" style="content:''">全部列表...</span>
+        </a>
+    </div>
   </ul>
 </nav>
-    <footer class="portletFooter"
-            tal:condition="python:showMore or view.include_empty_footer()"
-            tal:define="showMore view/data/show_more">
-        <span class="portletBottomLeft"></span>
-        <span tal:condition="showMore">
-        <a tal:attributes="href collection_url">
-           <span class="hiddenStructure"><span tal:replace="view/data/header" /> - </span>
-           <span i18n:translate="more_url">More&hellip;</span>
-        </a>
-        </span>
-        <span class="portletBottomRight"></span>
-  </footer>
 
 </section>

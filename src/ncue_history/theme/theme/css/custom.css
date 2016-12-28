@@ -1,21 +1,29 @@
 a:hover{
-   color: #E67918;
+    color: #E67918;
 }   
+h2 {
+    padding-bottom: 5px;
+}
+#parent-fieldname-text > h3 {
+    padding-bottom: 10px;
+}
 .fa-clock-o::before {
     display: none;
 }
 #edit-zone {
     z-index: 100;
 }
-#content-core  img {
-    width: auto;
+.edu2_faculty_des > figure > img {
+    width: 100%;
+}
+.bx-wrapper {
+    padding: 0 0 0 10px;
 }
 #portal-column-content {
     padding: 0px;
 }
-
 #portal-column-content > div section{
-    padding: 10px 0 0;
+    padding: 10px 0px 0;
 }
 .edu2_ft_topbar_des form input[type="text"] {
     background-color: transparent;
@@ -49,8 +57,8 @@ a:hover{
 
 .searchResults > li {
     border-bottom: 1px dotted #999;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 .documentLocation{
     font-size: 13px;
@@ -77,7 +85,7 @@ a:hover{
     font-family: FontAwesome;
     font-size: 16px;
     left: 0;
-    padding-right: 5px;
+    padding-right: 4px;
 }
 .widget.widget-links  > h5 {
     border-bottom: 1px dotted #ccc;
@@ -194,49 +202,141 @@ footer .widget h5 {
     display: none;
 }
 
-#teacher{
-    border-bottom: 2px dotted #bbb;
-    margin-bottom: 30px;
+.day {
+    color: #888;
+    font-size: 14px;
+    padding-left: 15px;
+}
+.article-block-horz, .people-block-horz {
+    margin-bottom: 35px;
+    margin-left: 0;
+}
+
+.article-block-horz li, .people-block-horz li {
+    border-bottom: 1px solid #cacaca;
+    list-style: outside none none;
+    margin-bottom: 28px;
+    min-height: 210px;
+    padding-bottom: 28px;
+    padding-left: 204px;
     position: relative;
 }
-.fixed .post-meta {
-    float: left;
-    margin: 0 20px 8px 0;
-    width: 100px;
+.article-block-horz li img, .people-block-horz li img {
+    left: 0;
+    position: absolute;
+    top: 0;
 }
-.post-content.fixed {
-    float: left;
-    width:635px;
+.article-block-horz li, .people-block-horz li {
+    list-style: outside none none;
 }
-.post-content > p {
-    letter-spacing: 0.02em;
-}
-.post-title, .post-title a {
-    color: #444;
-    font-size: 17px;
-    font-weight: bold;
 
-    margin-bottom: 5px;
+.showmore {
+    line-height: 38px;
 }
-.clearfix::before, .clearfix::after, .cf::before, .cf::after {
-    content: "";
-    display: block;
-    overflow: hidden;
+.widget-archive span {
+    background: #fbfbf9 url("../../resource/images/more.png") no-repeat scroll 13px center;
+    border: 1px solid #ddd;
+	border-radius: 4px;
+    font-size: 15px;
+    margin-top: 20px;
+    padding-left: 40px;
+    padding-right: 15px;
 }
-.clearfix::after, .cf::after {
-    clear: both;
+.widget-archive span:hover {
+    background:#ffffff url("../../resource/images/more-hover.png") no-repeat scroll 13px center;
+    box-shadow: 0 3px 3px rgba(20%, 20%, 40%, 0.2);
 }
-.clearfix::before, .clearfix::after, .cf::before, .cf::after {
-    content: "";
-    display: block;
-    overflow: hidden;
+.ploneCalendar td.cal_prev_month, .ploneCalendar td.cal_next_month {
+    background-color: #fff;
+    opacity: 0.4;
+	
+}
+.ploneCalendar td.today {
+    border-color: #eee;
+}
+.ploneCalendar .event {
+    cursor: default;
+}
+.portletContent caption {
+    display: none;
+}
+#login-forgotten-password {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.formControls {
+    margin-top: 20px;
+}
+.field {
+    margin-bottom: 20px;
+}
+
+
+.banner_box {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+blockquote {
+    background-color: #fbfaf8;
+    background-image: url("../../../resource/images/f-braudel.png");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    border-color: #cacaca #cacaca #cacaca #a51c30;
+    border-style: solid;
+    border-width: 1px 1px 1px 3px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    color: #555;
+    font-size: 16px;
+    margin: 0 0 10px;
+    padding: 20px 18px;
+    position: relative;
 }
 /*
 =================================================
-			media RWD
+			RWD for mobil 480px
 =================================================
 */
 @media (max-width: 480px) {
+figure img {
+    float: left;
+    height: auto;
+    width: auto;
+}
+.broadcast_wrap {
+    margin-top: 0px;
+	margin-bottom: 10px;
+}
+.quot{
+    display: none;   
+}	
+.banner_box {
+    display: inline-box;
+    width: 49.2%;
+}
+#portal-column-content > div section {
+    padding: 6px 0 0;
+}
+.article-block-horz li, .people-block-horz li {
+    margin-bottom: 20px;
+    min-height: 65px;
+    padding-bottom: 10px;
+    padding-left: 65px;
+    width: auto;
+}
+.article-block-horz li img, .people-block-horz li img {
+    max-width: 55px;
+    position: absolute;
+}
+.article-block-horz h2 {
+    font-size: 20px;
+}	
+.article-block-horz p {
+    font-size: 15px;
+}
+.sidebar_rpost_des > li {
+    border-bottom: 1px dotted #dcdcdc;
+    padding-bottom: 5px;
+}
 .section-admissions .kf_inr_banner {
 	padding: 30px 0;
 }

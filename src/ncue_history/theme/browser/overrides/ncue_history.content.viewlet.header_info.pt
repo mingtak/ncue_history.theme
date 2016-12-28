@@ -1,0 +1,38 @@
+<?python
+from plone import api
+portal = api.portal.get()
+?>
+<div class="top_bar_2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="pull-left"> <em class="contct_2"><i class="fa fa-phone"></i> 聯絡電話 (04) 721-1207</em> </div>
+          </div>
+          <div class="col-md-7">
+            <div class="lng_wrap">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-globe"></i>語言 <span class="caret"></span> </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="/?set_language=zh-tw">中文</a></li>
+                  <li><a href="/intro?set_language=en">English</a></li>
+                </ul>
+              </div>
+            </div>
+            <ul class="top_nav">
+              <li>
+                  <a href="https://www.facebook.com/groups/696734843759803/" target="_blank">
+                      <img src="${portal/absolute_url}/resource/images/fb.png" style="vertical-align: middle">
+                  </a>
+              </li>
+<li> 
+<a href="http://blog.ncue.edu.tw/ashin" target="_blank"> 
+<img src="http://history.babywith.me/resource/images/blog.png"tyle="vertical-align: middle"> 
+</a> 
+</li>
+              <li><a href="http://www.ncue.edu.tw/" target="_blank">學校首頁</a></li>
+              <li><a href="${portal/absolute_url}/download">下載資源</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>

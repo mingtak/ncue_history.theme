@@ -84,11 +84,11 @@
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-	background: #666;
+	background: #E5E5DE;
 	text-indent: -9999px;
 	display: block;
-	width: 10px;
-	height: 10px;
+	width: 8px;
+	height: 8px;
 	margin: 0 5px;
 	outline: 0;
 	-moz-border-radius: 5px;
@@ -98,13 +98,13 @@
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
-	background: #000;
+	background: #A49B94;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
-	left: 10px;
+	left: 20px;
 	background: url(../images/controls.png) no-repeat 0 -32px;
 }
 
