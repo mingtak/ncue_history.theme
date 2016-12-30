@@ -24,11 +24,11 @@ portal = api.portal.get()
                       <img src="${portal/absolute_url}/resource/images/fb.png" style="vertical-align: middle">
                   </a>
               </li>
-<li> 
-<a href="http://blog.ncue.edu.tw/ashin" target="_blank"> 
-<img src="http://history.babywith.me/resource/images/blog.png"tyle="vertical-align: middle"> 
-</a> 
-</li>
+              <li> 
+                  <a href="http://blog.ncue.edu.tw/ashin" target="_blank">
+                      <img src="${portal/absolute_url}/resource/images/blog.png" tyle="vertical-align: middle"> 
+                  </a> 
+              </li>
               <li><a href="http://www.ncue.edu.tw/" target="_blank">學校首頁</a></li>
               <li><a href="${portal/absolute_url}/download">下載資源</a></li>
             </ul>
